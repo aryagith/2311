@@ -3,31 +3,38 @@ package Models;
 import java.util.*;
 
 public class Review {
-    private Rating rating;
+    
+    private static final int MAX_RATING = 5;
+    private int rating;
     private Movie movie;
     private List<Comment> replies;
     private String title;
     private User user;
+    private String content;
 
-    public Review(User user,Movie movie){
+    public Review(User user,Movie movie,String content,int rating){
         title="";
-        rating=new Rating();
+        setRating(rating);
         replies=new ArrayList<Comment>();
         this.user=user;
         this.movie=movie;
+        this.content=content;
+        movie.addReview(this);
     }
-    public Review(User user,Movie movie,Rating rating,String title){
+    public Review(User user,Movie movie,String content,int rating,String title){
         this.title=title;
         this.movie=movie;
-        this.rating=rating;
+        setRating(rating);
         this.user=user;
         this.replies=new ArrayList<Comment>();
+        this.content=content;
+        movie.addReview(this);
     }
     
     public Movie getMovie() {
         return movie;
     }
-    public Rating getRating() {
+    public int getRating() {
         return rating;
     }
     public String getTitle() {
@@ -42,8 +49,15 @@ public class Review {
     public void setMovie(Movie movie) {
         this.movie = movie;
     }
-    public void setRating(Rating rating) {
-        this.rating = rating;
+    public void setRating(int rating) {
+        // Ensure that the rating value is within the range of 1 to MAX_RATING
+        if (rating < 1) {
+            this.rating = 1;
+        } else if (rating > MAX_RATING) {
+            this.rating = MAX_RATING;
+        } else {
+            this.rating = rating;
+        }
     }
     public void setReplies(List<Comment> replies) {
         this.replies = replies;
@@ -56,5 +70,16 @@ public class Review {
     }
     public void addComment(Comment comment){
        this.replies.add(comment);
+    }
+    public String getContent() {
+        return content;
+    }
+    public void setContent(String content) {
+        this.content = content;
+    }
+    @Override
+    public String toString() {
+        return "Review [rating=" + rating + ", movie=" + movie + ", replies=" + replies + ", title=" + title + ", user="
+                + user + ", content=" + content + "]";
     }
 }

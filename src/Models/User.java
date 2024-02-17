@@ -2,7 +2,7 @@ package Models;
 
 import java.util.List;
 
-class User {
+public class User {
     private String username;
     private String password;
     private Watchlist watchlist;

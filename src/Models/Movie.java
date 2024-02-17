@@ -2,7 +2,7 @@ package Models;
 
 import java.util.*;
 
-class Movie {
+public class Movie {
     private String title;
     private int releaseYear;
     private String description;

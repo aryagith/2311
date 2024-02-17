@@ -5,33 +5,34 @@ import java.util.*;
 public class Comment {
     private User user;
     private String content;
-    private Review review;//comment will be under this review
-    private Comment comment;//OR under this comment
+    private Review parentReview;//comment will be under this review
+    private Comment parentComment;//OR under this comment
     private int noOfUpvotes;
     private int noOfDownvotes;
     private List<Comment> replies;
-    private int TotalVotes=(noOfUpvotes-noOfDownvotes);//like on reddit
    
-    public Comment(User user,Review review){
-       this.content="";
-       this.review=review;
+    public Comment(User user,Review parentReview,String content){
+       this.content=content;
+       this.parentReview=parentReview;
        this.noOfDownvotes=0;
        this.noOfUpvotes=0;
        this.user=user;
        this.replies=new ArrayList<Comment>();
+       parentReview.addComment(this);
     }
 
-    public Comment(User user,Comment comment){
-        this.content="";
-        this.comment=comment;
+    public Comment(User user,Comment parentComment,String content){
+        this.content=content;
+        this.parentComment=parentComment;
         this.noOfDownvotes=0;
         this.noOfUpvotes=0;
         this.user=user;
         this.replies=new ArrayList<Comment>();
+        parentComment.addReply(this);
     }
     
-    public Comment getComment() {
-        return comment;
+    public Comment getParentComment() {
+        return parentComment;
     }
     public int getNoOfDownvotes() {
         return noOfDownvotes;
@@ -45,29 +46,29 @@ public class Comment {
     public List<Comment> getReplies() {
         return replies;
     }
-    public Review getReview() {
-        return review;
+    public Review getParentReview() {
+        return parentReview;
     }
     public User getUser() {
         return user;
     }
-    public void setComment(Comment comment) {
-        this.comment = comment;
+    public void setParentComment(Comment comment) {
+        this.parentComment = comment;
     }
     public void setContent(String content) {
         this.content = content;
     }
-    public void setNoOfDownvotes(int noOfDownvotes) {
+    public void setDownvotes(int noOfDownvotes) {
         this.noOfDownvotes = noOfDownvotes;
     }
-    public void setNoOfUpvotes(int noOfUpvotes) {
+    public void setUpvotes(int noOfUpvotes) {
         this.noOfUpvotes = noOfUpvotes;
     }
     public void setReplies(List<Comment> replies) {
         this.replies = replies;
     }
-    public void setReview(Review review) {
-        this.review = review;
+    public void setParentReview(Review review) {
+        this.parentReview = review;
     }
     public void setUser(User user) {
         this.user = user;
@@ -79,12 +80,15 @@ public class Comment {
         this.noOfDownvotes++;
     }
     public int getTotalVotes() {
-        return TotalVotes;
+        return noOfUpvotes - noOfDownvotes;
     }
-    public void setTotalVotes(int totalVotes) {
-        TotalVotes = totalVotes;
+    public void addReply(Comment reply) {
+        this.replies.add(reply);
     }
-    public void addComment(Comment comment) {
-        this.replies.add(comment);
+
+    @Override
+    public String toString() {
+        return "Comment [user=" + user + ", content=" + content + ", replies=" + replies + "]";
     }
+    
 }
