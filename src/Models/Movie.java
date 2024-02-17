@@ -10,6 +10,7 @@ public class Movie {
     private Double rating;
     private List<Double> rating_list;
     private List<Review> reviews;
+    private String coverImageUrl;
 
     public Movie(String title, int releaseYear, String description, String genre) {
         this.title = title;
@@ -84,5 +85,13 @@ public class Movie {
     public void addRating(Double rating){
        this.rating_list.add(rating);
        this.rating = rating_list.stream().mapToDouble(a -> a).average().orElse(0.0);
+    }
+
+    public void setCoverImageUrl(String poster) {
+        this.coverImageUrl = poster;
+    }
+
+    public String getCoverImageUrl() {
+        return this.coverImageUrl;
     }
 }

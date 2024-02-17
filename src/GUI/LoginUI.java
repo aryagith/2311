@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import Models.*;
+import Services.MovieManager;
 
 public class LoginUI extends JFrame {
     private JTextField usernameField;
@@ -45,7 +46,8 @@ public class LoginUI extends JFrame {
                     //to be retreived later from DB
                     User demoUser = demoUser(username);
                     JOptionPane.showMessageDialog(LoginUI.this, "Login successful");
-                    DashboardUI dash = new DashboardUI(demoUser);
+                    MovieManager mm = new MovieManager();
+                    DashboardUI dash = new DashboardUI(demoUser, mm);
                 } else {
                     JOptionPane.showMessageDialog(LoginUI.this, "Invalid username or password");
                 }
