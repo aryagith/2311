@@ -60,7 +60,7 @@ public class LoginUI extends JFrame {
     }
 
     private boolean authenticateUser(String username, String password) {
-        File file = new File("src/GUI/users.txt");
+        File file = new File("src/main/java/GUI/users.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {

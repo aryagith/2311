@@ -21,7 +21,7 @@ public class DashboardUI extends JFrame {
         this.movieManager = movieManager;
 
         setTitle("Dashboard");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setPreferredSize(new Dimension(600, 400));
         setLocationRelativeTo(null);
 
@@ -43,7 +43,9 @@ public class DashboardUI extends JFrame {
                 String searchText = searchField.getText();
                 try {
                     List<Movie> searchResults = movieManager.searchMovies(searchText);
-                    displaySearchResults(searchResults);
+//                    displaySearchResults(searchResults);
+                    BrowseMovieUI browsUI = new BrowseMovieUI();
+                    browsUI.displaySearchResults(searchResults);
                 } catch (IOException ex) {
                     ex.printStackTrace(); // Handle exception appropriately
                 }
@@ -98,29 +100,4 @@ public class DashboardUI extends JFrame {
         setVisible(true);
     }
 
-    private void displaySearchResults(List<Movie> searchResults) {
-        JPanel searchResultsPanel = new JPanel(new GridLayout(searchResults.size(), 1));
-        for (Movie movie : searchResults) {
-            JPanel moviePanel = new JPanel(new BorderLayout());
-            JLabel titleLabel = new JLabel("Title: " + movie.getTitle());
-            JLabel yearLabel = new JLabel("Release Year: " + movie.getReleaseYear());
-            JLabel descriptionLabel = new JLabel("Description: " + movie.getDescription());
-            JLabel ratingLabel = new JLabel("Rating: " + movie.getRating());
-            JLabel coverImageUrlLabel = new JLabel("Cover Image URL: " + movie.getCoverImageUrl());
-
-            moviePanel.add(titleLabel, BorderLayout.NORTH);
-            moviePanel.add(yearLabel, BorderLayout.CENTER);
-            moviePanel.add(descriptionLabel, BorderLayout.CENTER);
-            moviePanel.add(ratingLabel, BorderLayout.CENTER);
-            moviePanel.add(coverImageUrlLabel, BorderLayout.CENTER);
-
-            searchResultsPanel.add(moviePanel);
-        }
-
-        // Remove the old content panel and add the new search results panel
-        contentPanel.removeAll(); // Clear existing content
-        contentPanel.add(searchResultsPanel, BorderLayout.CENTER);
-        contentPanel.revalidate();
-        contentPanel.repaint();
-    }
 }
