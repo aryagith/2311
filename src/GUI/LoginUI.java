@@ -6,6 +6,8 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import Models.*;
+import Services.MovieManager;
 
 public class LoginUI extends JFrame {
     private JTextField usernameField;
@@ -41,8 +43,11 @@ public class LoginUI extends JFrame {
                 String password = new String(passwordChars);
 
                 if (authenticateUser(username, password)) {
+                    //to be retreived later from DB
+                    User demoUser = demoUser(username);
                     JOptionPane.showMessageDialog(LoginUI.this, "Login successful");
-                    DashboardUI dash = new DashboardUI();
+                    MovieManager mm = new MovieManager();
+                    DashboardUI dash = new DashboardUI(demoUser, mm);
                 } else {
                     JOptionPane.showMessageDialog(LoginUI.this, "Invalid username or password");
                 }
@@ -77,6 +82,38 @@ public class LoginUI extends JFrame {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public User demoUser(String username){
+        User user = new User(username, "password");
+
+        // Add some reviews
+        Review review1 = new Review("Great movie!", 5);
+        Review review2 = new Review("Not bad", 3);
+        user.addReview(review1);
+        user.addReview(review2);
+
+        // Add some comments
+        Comment comment1 = new Comment("Enjoyed watching it!");
+        Comment comment2 = new Comment("Could have been better.");
+        user.addComment(comment1);
+        user.addComment(comment2);
+
+        // Add some friends
+        User friend1 = new User("friend1", "friendPassword");
+        User friend2 = new User("friend2", "friendPassword");
+        user.addFriend(friend1);
+        user.addFriend(friend2);
+
+        // Add some recently viewed movies
+        Movie movie1 = new Movie("Movie 1", 2010, "movie 1 description", "horror");
+        Movie movie2 = new Movie("Movie 2", 2021, "movie 2 description", "comedy");
+        Movie movie3 = new Movie("Movie 3", 2015, "movie 3 description", "action");
+        user.addRecentlyViewed(movie1);
+        user.addRecentlyViewed(movie2);
+        user.addRecentlyViewed(movie3);
+
+        return user;
     }
 
 
