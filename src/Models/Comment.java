@@ -11,6 +11,10 @@ public class Comment {
     private int noOfDownvotes;
     private List<Comment> replies;
    
+    public Comment(String content){
+
+    }
+
     public Comment(User user,Review parentReview,String content){
        this.content=content;
        this.parentReview=parentReview;

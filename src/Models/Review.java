@@ -12,6 +12,10 @@ public class Review {
     private User user;
     private String content;
 
+    public Review(String content, int rating){
+    
+    }
+
     public Review(User user,Movie movie,String content,int rating){
         title="";
         setRating(rating);
