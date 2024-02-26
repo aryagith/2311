@@ -1,20 +1,33 @@
 import GUI.LoginUI;
+import Models.Movie;
+import Services.MovieManager;
 
+import javax.swing.*;
+import java.io.IOException;
 import java.util.List;
-
-import Models.*;
-
 
 public class Main {
     public static void main(String[] args) {
-        User user = new User("John", "123");
-        Review review = new Review(user, new Movie("Animal", 2023, null, null), "This movie is not good", 2);
-        Comment parentComment = new Comment(user, review, "I agree");
-        Comment childComment1 = new Comment(user, parentComment, "Me too!");
-        Comment childComment2 = new Comment(user, parentComment, "I disagree");
-       Comment newReply = new Comment(user, parentComment, "I also agree");
-        parentComment.addReply(newReply);
-        List<Comment> replies = parentComment.getReplies();
-        System.out.println(replies);
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new LoginUI();
+            }
+        });
+
+//        MovieManager movieManager = new MovieManager();
+//        try {
+//            List<Movie> movies = movieManager.searchMovies("Avengers");
+//            for (Movie movie : movies) {
+//                System.out.println("Title: " + movie.getTitle());
+//                System.out.println("Release Year: " + movie.getReleaseYear());
+//                System.out.println("Description: " + movie.getDescription());
+//                System.out.println("Rating: " + movie.getRating());
+//                System.out.println("Cover Image URL: " + movie.getCoverImageUrl());
+//                System.out.println();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
+
 }
