@@ -1,0 +1,64 @@
+<changelist name="Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1" date="1710104391162" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 10-03-2024 16:58 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/DashboardUI$3.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/DashboardUI$3.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/DashboardUI$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/DashboardUI$2.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/DashboardUI$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/DashboardUI$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/BrowseMovieUI$2.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/BrowseMovieUI$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/BrowseMovieUI$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/BrowseMovieUI$1.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/BrowseMovieUI$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/BrowseMovieUI$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/DashboardUI.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/DashboardUI.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/DashboardUI.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Models/User.class" />
+    <option name="AFTER_PATH" value="target/classes/Models/User.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/User.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/LoginUI.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/LoginUI.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/LoginUI.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Services/UserService.class" />
+    <option name="AFTER_PATH" value="target/classes/Services/UserService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/UserService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/movie.db" />
+    <option name="AFTER_PATH" value="target/classes/movie.db" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/movie.db" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Services/DbFunctions.class" />
+    <option name="AFTER_PATH" value="target/classes/Services/DbFunctions.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/DbFunctions.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/DashboardUI$1.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/DashboardUI$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/DashboardUI$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/BrowseMovieUI.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/BrowseMovieUI.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_10-03-2024_16_58_[Changes]1/BrowseMovieUI.class" />
+  </binary>
+</changelist>

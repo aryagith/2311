@@ -1,0 +1,355 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e6384baf-0a21-4a12-b447-4736d7fd9193\" name=\"Changes\" comment=\"&quot;fixed main&quot;\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/GUI/DashboardUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/GUI/DashboardUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/GUI/LoginUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/GUI/LoginUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Services/MovieManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Services/MovieManager.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Services/MovieService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Services/MovieService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Services/UserService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Services/UserService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/movie.db\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/movie.db\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$1.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$1.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$2.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$2.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$3.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI$3.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/GUI/DashboardUI.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/GUI/LoginUI.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/GUI/LoginUI.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/Main.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/Main.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/Services/MovieService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/Services/MovieService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/Services/UserService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/Services/UserService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/movie.db\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/movie.db\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2dSRjVNkRUVxVB6cM9m1cVNcUqC\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"itr2-Ahmed\",\r\n    \"last_opened_file_path\": \"/Users/ahmedel-dib/Desktop/project2311/2311\",\r\n    \"settings.editor.selected.configurable\": \"com.diffblue.cover.intellij\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"2311\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"2311\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e6384baf-0a21-4a12-b447-4736d7fd9193\" name=\"Changes\" comment=\"\" />\r\n      <created>1709999628022</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1709999628022</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"&quot;added database connection and fixed loginUI to use the database. Fixed project structure&quot;\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709999702945</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709999702945</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"&quot;added movies to the database and functionality to the dbservice classes&quot;\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710010517631</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710010517631</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"&quot;added movies to the database and functionality to the dbservice classes&quot;\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710010583759</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710010583759</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"&quot;fixed main&quot;\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710010658774</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710010658774</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"&quot;added database connection and fixed loginUI to use the database. Fixed project structure&quot;\" />\r\n    <MESSAGE value=\"&quot;added movies to the database and functionality to the dbservice classes&quot;\" />\r\n    <MESSAGE value=\"&quot;fixed main&quot;\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"&quot;fixed main&quot;\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,21 +4,28 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e6384baf-0a21-4a12-b447-4736d7fd9193" name="Changes" comment="&quot;fixed main&quot;">
++    <list default="true" id="6759cc42-6837-4f6f-8a2d-48ca0c4c7fb6" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/src/main/java/Services/FriendService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/BrowseMovieUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/BrowseMovieUI.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DashboardUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DashboardUI.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LoginUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/LoginUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/MovieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/MovieManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/MovieService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/UserService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/resources/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/movie.db" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI$1.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI$2.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$1.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$2.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/DashboardUI$3.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/GUI/DashboardUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/DashboardUI.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/GUI/LoginUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/LoginUI.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/Services/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/MovieService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/Services/MovieManager.class" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/Services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/UserService.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/movie.db" afterDir="false" />
+     </list>
+@@ -35,6 +42,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="Itr2" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -47,20 +59,18 @@
+       </MavenGeneralSettings>
+     </option>
+   </component>
+-  <component name="ProjectId" id="2dSRjVNkRUVxVB6cM9m1cVNcUqC" />
++  <component name="ProjectId" id="2dSxOmWFKlnLuXnoqPzYuTvPIcc" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "itr2-Ahmed",
+-    "last_opened_file_path": "/Users/ahmedel-dib/Desktop/project2311/2311",
+-    "settings.editor.selected.configurable": "com.diffblue.cover.intellij"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Itr2-krish&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration default="true" type="JetRunConfigurationType">
+       <module name="2311" />
+@@ -79,51 +89,23 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="e6384baf-0a21-4a12-b447-4736d7fd9193" name="Changes" comment="" />
+-      <created>1709999628022</created>
++      <changelist id="6759cc42-6837-4f6f-8a2d-48ca0c4c7fb6" name="Changes" comment="" />
++      <created>1710015250611</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1709999628022</updated>
+-    </task>
+-    <task id="LOCAL-00001" summary="&quot;added database connection and fixed loginUI to use the database. Fixed project structure&quot;">
+-      <option name="closed" value="true" />
+-      <created>1709999702945</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1709999702945</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="&quot;added movies to the database and functionality to the dbservice classes&quot;">
+-      <option name="closed" value="true" />
+-      <created>1710010517631</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710010517631</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="&quot;added movies to the database and functionality to the dbservice classes&quot;">
+-      <option name="closed" value="true" />
+-      <created>1710010583759</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710010583759</updated>
++      <updated>1710015250611</updated>
+     </task>
+-    <task id="LOCAL-00004" summary="&quot;fixed main&quot;">
+-      <option name="closed" value="true" />
+-      <created>1710010658774</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1710010658774</updated>
+-    </task>
+-    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="&quot;added database connection and fixed loginUI to use the database. Fixed project structure&quot;" />
+-    <MESSAGE value="&quot;added movies to the database and functionality to the dbservice classes&quot;" />
+-    <MESSAGE value="&quot;fixed main&quot;" />
+-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fixed main&quot;" />
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/GUI/BrowseMovieUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.MouseAdapter;\r\nimport java.net.*;\r\nimport java.util.List;\r\nimport java.util.concurrent.*;\r\nimport java.awt.event.MouseEvent;\r\n\r\nimport Models.Movie;\r\nimport Models.User;\r\n\r\npublic class BrowseMovieUI extends JFrame {\r\n    public final JPanel searchResultsPanel;\r\n    private final ExecutorService executorService;\r\n    private final User user;\r\n\r\n    public BrowseMovieUI(User user) {\r\n        this.user = user;\r\n        setTitle(\"Movie Search Results\");\r\n        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\r\n        setSize(600, 600);\r\n\r\n        searchResultsPanel = new JPanel(new GridLayout(0, 3)); // 3 columns grid layout\r\n        JScrollPane scrollPane = new JScrollPane(searchResultsPanel);\r\n        getContentPane().add(scrollPane, BorderLayout.CENTER);\r\n        setVisible(true);\r\n        executorService = Executors.newCachedThreadPool();\r\n        System.out.println(\"init done\");\r\n    }\r\n\r\n    public void displaySearchResults(List<Movie> searchResults) {\r\n        for (Movie movie : searchResults) {\r\n            executorService.execute(() -> addMoviePanel(movie));\r\n            System.out.println(\"movie done\");\r\n        }\r\n    }\r\n\r\n    public void addMoviePanel(Movie movie) {\r\n        JPanel moviePanel = new JPanel();\r\n        moviePanel.setLayout(new BorderLayout());\r\n        moviePanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Add spacing between movie entries\r\n        moviePanel.setPreferredSize(new Dimension(200, 300)); // Set preferred size for each movie panel\r\n\r\n        // Title with year and rating\r\n        String titleText = \"<html><b><u>\" + movie.getTitle() + \"</u></b> (\" + movie.getReleaseYear() + \") \" +\r\n                \"<font color='red'><br>\" + movie.getRating() + \"/10 &#9733;</b></font></html>\";\r\n        JLabel titleLabel = new JLabel(titleText);\r\n        titleLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // Change cursor to hand\r\n        titleLabel.addMouseListener(new MouseAdapter() {\r\n            @Override\r\n            public void mouseClicked(MouseEvent e) {\r\n                openMovieUI(movie); // Open MovieUI when title is clicked\r\n            }\r\n        });\r\n        moviePanel.add(titleLabel, BorderLayout.NORTH);\r\n\r\n        // Cover image\r\n        JLabel coverImageLabel = new JLabel();\r\n        coverImageLabel.setPreferredSize(new Dimension(150, 225)); // Set preferred size for cover image\r\n        loadImage(movie.getCoverImageUrl(), coverImageLabel);\r\n        coverImageLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); // Change cursor to hand\r\n        coverImageLabel.addMouseListener(new MouseAdapter() {\r\n            @Override\r\n            public void mouseClicked(MouseEvent e) {\r\n                openMovieUI(movie); // Open MovieUI when image is clicked\r\n            }\r\n        });\r\n        moviePanel.add(coverImageLabel, BorderLayout.CENTER);\r\n\r\n        // Add moviePanel directly to the searchResultsPanel\r\n        searchResultsPanel.add(moviePanel);\r\n        searchResultsPanel.revalidate(); // Revalidate the searchResultsPanel\r\n        searchResultsPanel.repaint();    // Repaint the searchResultsPanel\r\n    }\r\n    public void openMovieUI(Movie movie) {\r\n        MovieUI movieUI = MovieUI.getInstance(movie, user);\r\n        movieUI.updateMovieDetails(movie);\r\n        movieUI.setVisible(true);\r\n        this.user.addRecentlyViewed(movie);\r\n    }\r\n\r\n    private void loadImage(String imageUrl, JLabel imageLabel) {\r\n        try {\r\n            URL url = new URL(imageUrl);\r\n            ImageIcon icon = new ImageIcon(url);\r\n            Image scaledImage = icon.getImage().getScaledInstance(150, -1, Image.SCALE_SMOOTH);\r\n            icon = new ImageIcon(scaledImage);\r\n            imageLabel.setIcon(icon);\r\n        } catch (MalformedURLException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void dispose() {\r\n        executorService.shutdownNow();\r\n        super.dispose();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/GUI/BrowseMovieUI.java b/src/main/java/GUI/BrowseMovieUI.java
+--- a/src/main/java/GUI/BrowseMovieUI.java	
++++ b/src/main/java/GUI/BrowseMovieUI.java	
+@@ -11,6 +11,7 @@
+ import Models.Movie;
+ import Models.User;
+ 
++
+ public class BrowseMovieUI extends JFrame {
+     public final JPanel searchResultsPanel;
+     private final ExecutorService executorService;
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CheckstyleConfigurable\">\r\n    <option name=\"suppFilterFilename\" value=\"\" />\r\n    <option name=\"suppCommentFilter\" value=\"false\" />\r\n    <option name=\"offComment\" value=\"CHECKSTYLE\\:OFF\" />\r\n    <option name=\"onComment\" value=\"CHECKSTYLE\\:ON\" />\r\n    <option name=\"checkFormat\" value=\".*\" />\r\n    <option name=\"messageFormat\" value=\"\" />\r\n    <option name=\"checkCPP\" value=\"true\" />\r\n    <option name=\"checkC\" value=\"true\" />\r\n    <option name=\"suppNearbyCommentFilter\" value=\"false\" />\r\n    <option name=\"snCommentFormat\" value=\"SUPPRESS CHECKSTYLE (\\w+)\" />\r\n    <option name=\"snCheckFormat\" value=\"$1\" />\r\n    <option name=\"snMessageFormat\" value=\"\" />\r\n    <option name=\"snInfluenceFormat\" value=\"0\" />\r\n    <option name=\"snCheckCPP\" value=\"true\" />\r\n    <option name=\"snCheckC\" value=\"true\" />\r\n    <option name=\"pathToUserRulesConfiguration\" value=\"\" />\r\n    <option name=\"pathToJarWithRules\" value=\"\" />\r\n  </component>\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FindBugsConfigurable\">\r\n    <option name=\"make\" value=\"true\" />\r\n    <option name=\"effort\" value=\"default\" />\r\n    <option name=\"priority\" value=\"Medium\" />\r\n    <option name=\"excludeFilter\" value=\"\" />\r\n  </component>\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"PDMPlugin\">\r\n    <option name=\"skipTestSources\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_20\" default=\"true\" project-jdk-name=\"openjdk-20\" project-jdk-type=\"JavaSDK\" />\r\n  <component name=\"SuppressionsComponent\">\r\n    <option name=\"suppComments\" value=\"[]\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,31 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="CheckstyleConfigurable">
+-    <option name="suppFilterFilename" value="" />
+-    <option name="suppCommentFilter" value="false" />
+-    <option name="offComment" value="CHECKSTYLE\:OFF" />
+-    <option name="onComment" value="CHECKSTYLE\:ON" />
+-    <option name="checkFormat" value=".*" />
+-    <option name="messageFormat" value="" />
+-    <option name="checkCPP" value="true" />
+-    <option name="checkC" value="true" />
+-    <option name="suppNearbyCommentFilter" value="false" />
+-    <option name="snCommentFormat" value="SUPPRESS CHECKSTYLE (\w+)" />
+-    <option name="snCheckFormat" value="$1" />
+-    <option name="snMessageFormat" value="" />
+-    <option name="snInfluenceFormat" value="0" />
+-    <option name="snCheckCPP" value="true" />
+-    <option name="snCheckC" value="true" />
+-    <option name="pathToUserRulesConfiguration" value="" />
+-    <option name="pathToJarWithRules" value="" />
+-  </component>
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="FindBugsConfigurable">
+-    <option name="make" value="true" />
+-    <option name="effort" value="default" />
+-    <option name="priority" value="Medium" />
+-    <option name="excludeFilter" value="" />
+-  </component>
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>
+@@ -33,11 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="PDMPlugin">
+-    <option name="skipTestSources" value="false" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK" />
+-  <component name="SuppressionsComponent">
+-    <option name="suppComments" value="[]" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/GUI/DashboardUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport java.io.IOException;\r\nimport java.util.List;\r\nimport Services.MovieManager;\r\n\r\nimport Models.*;\r\nimport Services.MovieService;\r\nimport org.json.JSONException;\r\n\r\npublic class DashboardUI extends JFrame {\r\n    private final User user;\r\n\r\n    private final JPanel contentPanel;\r\n    private MovieService movieService = new MovieService();\r\n\r\n    public DashboardUI(User user) {\r\n        this.user = user;\r\n\r\n\r\n        setTitle(\"Dashboard\");\r\n        setDefaultCloseOperation(DISPOSE_ON_CLOSE);\r\n        setPreferredSize(new Dimension(800, 600));\r\n        setLocationRelativeTo(null);\r\n\r\n        contentPanel = new JPanel(new BorderLayout());\r\n        JPanel headerPanel = createHeaderPanel();\r\n        JPanel searchPanel = createSearchPanel();\r\n        JPanel recentlyViewedPanel = createRecentlyViewedPanel();\r\n        JPanel friendsPanel = createFriendsPanel();\r\n\r\n        contentPanel.add(headerPanel, BorderLayout.NORTH);\r\n        contentPanel.add(searchPanel, BorderLayout.CENTER);\r\n        contentPanel.add(recentlyViewedPanel, BorderLayout.WEST);\r\n        contentPanel.add(friendsPanel, BorderLayout.EAST);\r\n\r\n        add(contentPanel);\r\n        pack();\r\n        setVisible(true);\r\n    }\r\n\r\n    private JPanel createHeaderPanel() {\r\n        JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));\r\n        JLabel welcomeLabel = new JLabel(\"Welcome to the Dashboard, \" + user.getUsername() + \"!\");\r\n        welcomeLabel.setFont(new Font(\"Arial\", Font.BOLD, 20));\r\n        headerPanel.add(welcomeLabel);\r\n        return headerPanel;\r\n    }\r\n\r\n    private JPanel createSearchPanel() {\r\n        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));\r\n        JTextField searchField = new JTextField(20);\r\n        JButton searchButton = new JButton(\"Search\");\r\n        searchButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                String searchText = searchField.getText();\r\n                searchMovies(searchText);\r\n            }\r\n        });\r\n        searchPanel.add(searchField);\r\n        searchPanel.add(searchButton);\r\n        return searchPanel;\r\n    }\r\n\r\n    private void searchMovies(String searchText) {\r\n        List<Movie> searchResults = movieService.getMovieByName(searchText);\r\n        BrowseMovieUI browseMovieUI = new BrowseMovieUI(this.user);\r\n        browseMovieUI.displaySearchResults(searchResults);\r\n    }\r\n\r\n    private JPanel createRecentlyViewedPanel() {\r\n        JPanel recentlyViewedPanel = new JPanel(new BorderLayout());\r\n        JLabel recentlyViewedLabel = new JLabel(\"Recently Viewed Movies:\");\r\n        recentlyViewedLabel.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        recentlyViewedPanel.add(recentlyViewedLabel, BorderLayout.NORTH);\r\n        JPanel recentlyViewedMoviesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));\r\n        for (Movie movie : user.getRecentlyViewed()) {\r\n            JButton movieButton = new JButton(movie.getTitle());\r\n            movieButton.addActionListener(new ActionListener() {\r\n                @Override\r\n                public void actionPerformed(ActionEvent e) {\r\n                    JOptionPane.showMessageDialog(DashboardUI.this, \"You clicked on \" + movie.getTitle());\r\n                }\r\n            });\r\n            recentlyViewedMoviesPanel.add(movieButton);\r\n        }\r\n        recentlyViewedPanel.add(recentlyViewedMoviesPanel, BorderLayout.CENTER);\r\n        return recentlyViewedPanel;\r\n    }\r\n\r\n    private JPanel createFriendsPanel() {\r\n        JPanel friendsPanel = new JPanel(new BorderLayout());\r\n        JLabel friendsLabel = new JLabel(\"Friends:\");\r\n        friendsLabel.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        friendsPanel.add(friendsLabel, BorderLayout.NORTH);\r\n        JPanel friendsListPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));\r\n        for (User friend : user.getFriendsList()) {\r\n            JButton friendButton = new JButton(friend.getUsername());\r\n            friendButton.addActionListener(new ActionListener() {\r\n                @Override\r\n                public void actionPerformed(ActionEvent e) {\r\n                    JOptionPane.showMessageDialog(DashboardUI.this, \"You clicked on \" + friend.getUsername());\r\n                }\r\n            });\r\n            friendsListPanel.add(friendButton);\r\n        }\r\n        friendsPanel.add(friendsListPanel, BorderLayout.CENTER);\r\n        return friendsPanel;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/GUI/DashboardUI.java b/src/main/java/GUI/DashboardUI.java
+--- a/src/main/java/GUI/DashboardUI.java	
++++ b/src/main/java/GUI/DashboardUI.java	
+@@ -4,11 +4,17 @@
+ import java.awt.*;
+ import java.awt.event.*;
+ import java.io.IOException;
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.ResultSet;
++import java.sql.SQLException;
++import java.util.ArrayList;
+ import java.util.List;
+-import Services.MovieManager;
++//import Services.MovieManager;
+ 
+ import Models.*;
+-import Services.MovieService;
++import Services.*;;
++
+ import org.json.JSONException;
+ 
+ public class DashboardUI extends JFrame {
+@@ -16,8 +22,8 @@
+ 
+     private final JPanel contentPanel;
+     private MovieService movieService = new MovieService();
+-
+-    public DashboardUI(User user) {
++    DefaultListModel<String> listModel = new DefaultListModel<>();
++    public DashboardUI(User user) throws SQLException {
+         this.user = user;
+ 
+ 
+@@ -30,13 +36,15 @@
+         JPanel headerPanel = createHeaderPanel();
+         JPanel searchPanel = createSearchPanel();
+         JPanel recentlyViewedPanel = createRecentlyViewedPanel();
+-        JPanel friendsPanel = createFriendsPanel();
++        JPanel friendsPanel = FriendService.createFriendsPanel();
++        JPanel searchFriendsPanel = createSfPanel();
+ 
+         contentPanel.add(headerPanel, BorderLayout.NORTH);
+         contentPanel.add(searchPanel, BorderLayout.CENTER);
+         contentPanel.add(recentlyViewedPanel, BorderLayout.WEST);
++
++        contentPanel.add(searchFriendsPanel, BorderLayout.PAGE_END);
+         contentPanel.add(friendsPanel, BorderLayout.EAST);
+-
+         add(contentPanel);
+         pack();
+         setVisible(true);
+@@ -65,6 +73,43 @@
+         searchPanel.add(searchButton);
+         return searchPanel;
+     }
++
++    private JPanel createSfPanel() {
++        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
++        JTextField searchField = new JTextField(10);
++        JButton searchButton = new JButton("Add Friend");
++        searchButton.addActionListener(new ActionListener() {
++            @Override
++            public void actionPerformed(ActionEvent e) {
++                String searchText = searchField.getText();
++                FriendService.addFriend(searchText);
++            }
++        });
++        searchPanel.add(searchField);
++        searchPanel.add(searchButton);
++        return searchPanel;
++    }
++    public boolean ifExists(String s){
++        ArrayList<String> users = new ArrayList<>();
++        String sql = "SELECT from Friends_Test";
++        try (Connection conn = DbFunctions.connect();
++             PreparedStatement pstmt = conn.prepareStatement(sql)) {
++
++
++            ResultSet resultSet = pstmt.executeQuery();
++
++            while (resultSet.next()) {
++                String user = resultSet.getString("User");
++                users.add(user);
++            }
++        } catch (SQLException e) {
++            e.printStackTrace();
++        }
++        return users.contains(s);
++
++    }
++
++
+ 
+     private void searchMovies(String searchText) {
+         List<Movie> searchResults = movieService.getMovieByName(searchText);
+@@ -92,23 +137,8 @@
+         return recentlyViewedPanel;
+     }
+ 
+-    private JPanel createFriendsPanel() {
+-        JPanel friendsPanel = new JPanel(new BorderLayout());
+-        JLabel friendsLabel = new JLabel("Friends:");
+-        friendsLabel.setFont(new Font("Arial", Font.BOLD, 16));
+-        friendsPanel.add(friendsLabel, BorderLayout.NORTH);
+-        JPanel friendsListPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+-        for (User friend : user.getFriendsList()) {
+-            JButton friendButton = new JButton(friend.getUsername());
+-            friendButton.addActionListener(new ActionListener() {
+-                @Override
+-                public void actionPerformed(ActionEvent e) {
+-                    JOptionPane.showMessageDialog(DashboardUI.this, "You clicked on " + friend.getUsername());
+-                }
+-            });
+-            friendsListPanel.add(friendButton);
+-        }
+-        friendsPanel.add(friendsListPanel, BorderLayout.CENTER);
+-        return friendsPanel;
+-    }
++
++
++
++
+ }
