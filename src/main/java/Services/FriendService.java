@@ -3,6 +3,8 @@ import Models.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,29 +72,49 @@ public class FriendService {
 
         return friends;
     }
-    public static List<User> getFriends(String namePart) {
-        List<User> friends = new ArrayList<>();
-        String sql = "SELECT Friend FROM Friends_Test ";
+
+    public static boolean deleteFriends(String s){
+        String sql = "DELETE FROM Friends_Test WHERE USER = ? AND FRIEND = ?";
+        String revSql = "DELETE FROM Friends_Test WHERE USER = ? AND FRIEND = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            ResultSet rs = pstmt.executeQuery();
-            while (rs.next()) {
-                User u1 = resultSetToFriends(rs);
-                friends.add(u1);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             PreparedStatement reversePstmt = conn.prepareStatement(revSql)) {
+
+
+            pstmt.setString(1, User.getUsername());
+            pstmt.setString(2, s);
+            int affectedRows = pstmt.executeUpdate();
+
+
+            reversePstmt.setString(1, s);
+            reversePstmt.setString(2, User.getUsername());
+            refreshFriendsList(User.getUsername(), listModel);
+            int reverseAffectedRows = reversePstmt.executeUpdate();
+
+
+            return (affectedRows > 0 && reverseAffectedRows > 0);
         }
-        return friends;
+
+        catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+    public static void refreshDeletedFriendsList(String username, DefaultListModel<String> listModel) {
+        listModel.clear();
+
+
+        ArrayList<String> friends = retrieveFriendsFromDatabase(username);
+
+
+        for (String friend : friends) {
+            listModel.addElement(friend);
+        }
     }
 
-    private static User resultSetToFriends(ResultSet rs) throws SQLException {
-        User u1 = new User(
-                rs.getString("Friend")
-        );
-        return u1;
-    }
     public static JPanel createFriendsPanel() throws SQLException {
       /*  JPanel friendsPanel = new JPanel(new BorderLayout());
         JLabel friendsLabel = new JLabel("Friends:");
@@ -138,11 +160,49 @@ public class FriendService {
         JList<String> friendsList = new JList<>(listModel);
 
         JScrollPane scrollPane = new JScrollPane(friendsList);
-        panel.add(scrollPane, BorderLayout.CENTER);
+        panel.add(scrollPane, BorderLayout.LINE_END);
 
 
         FriendService.refreshFriendsList(User.getUsername(), listModel);
 
+
         return panel;
     }
+    public static JPanel createSfPanel() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+        // Add Friend Panel
+        JPanel addFriendPanel = new JPanel(new FlowLayout());
+        JTextField addFriendField = new JTextField(10);
+        JButton addFriendButton = new JButton("Add Friend");
+        addFriendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = addFriendField.getText();
+                FriendService.addFriend(searchText);
+            }
+        });
+        addFriendPanel.add(addFriendField);
+        addFriendPanel.add(addFriendButton);
+        panel.add(addFriendPanel);
+
+        // Delete Friend Panel
+        JPanel deleteFriendPanel = new JPanel(new FlowLayout());
+        JTextField deleteFriendField = new JTextField(10);
+        JButton deleteFriendButton = new JButton("Delete Friend");
+        deleteFriendButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = deleteFriendField.getText();
+                FriendService.deleteFriends(searchText);
+            }
+        });
+        deleteFriendPanel.add(deleteFriendField);
+        deleteFriendPanel.add(deleteFriendButton);
+        panel.add(deleteFriendPanel);
+
+        return panel;
+    }
+
+
 }

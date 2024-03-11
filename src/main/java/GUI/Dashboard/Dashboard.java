@@ -40,7 +40,8 @@ public class Dashboard extends JFrame {
         recentlyViewedPanel = new RecentlyViewedPanel(user);
         centerPanel = new CenterPanel(movieService, user, this);
         JPanel friendsPanel = FriendService.createFriendsPanel();
-        JPanel searchFriendsPanel = createSfPanel();
+        JPanel searchFriendsPanel = FriendService.createSfPanel();
+       // JPanel deleteFriendsPanel = FriendService.deleteFriendsPanel();
 //        friendsPanel = new FriendsPanel(user);
 
         // Add the panels to the main panel
@@ -55,6 +56,7 @@ public class Dashboard extends JFrame {
         centralPanel.add(centerPanel, BorderLayout.CENTER);
         centralPanel.add(searchFriendsPanel, BorderLayout.PAGE_END);
         centralPanel.add(friendsPanel, BorderLayout.EAST);
+        //centralPanel.add(deleteFriendsPanel,BorderLayout.AFTER_LAST_LINE);
 //        centralPanel.add(friendsPanel, BorderLayout.EAST);
 
         mainPanel.add(centralPanel);
@@ -79,19 +81,5 @@ public class Dashboard extends JFrame {
     public RecentlyViewedPanel getRecentlyViewedPanel() {
         return recentlyViewedPanel;
     }
-    private JPanel createSfPanel() {
-        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JTextField searchField = new JTextField(10);
-        JButton searchButton = new JButton("Add Friend");
-        searchButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String searchText = searchField.getText();
-                FriendService.addFriend(searchText);
-            }
-        });
-        searchPanel.add(searchField);
-        searchPanel.add(searchButton);
-        return searchPanel;
-    }
+
 }
