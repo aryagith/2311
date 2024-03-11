@@ -30,7 +30,7 @@ public class MovieUI extends JFrame {
 
         setTitle("Movie Details: " + movie.getTitle());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setSize(400, 600);
+        setSize(500, 600);
         setLocationRelativeTo(null);
 
         initComponents();
@@ -79,13 +79,12 @@ public class MovieUI extends JFrame {
         });
         buttonPanel.add(leaveReviewButton);
 
-        rateButton = new JButton("Rate");
+        rateButton = new JButton("Read Reviews");
         rateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Logic to handle rating
-                JOptionPane.showMessageDialog(MovieUI.this, "Rate button clicked");
-            }
+                openReviewsUI(movie);            }
         });
         buttonPanel.add(rateButton);
 
@@ -127,6 +126,10 @@ public class MovieUI extends JFrame {
     }
     public void openLeaveReviewUI (User user, Movie movie){
         LeaveReviewUI reviewUI = new LeaveReviewUI(user, movie);
+        reviewUI.setVisible(true);
+    }
+    public void openReviewsUI (Movie movie){
+        ReviewsUI reviewUI = new ReviewsUI(movie);
         reviewUI.setVisible(true);
     }
 }

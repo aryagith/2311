@@ -34,6 +34,23 @@ public class ReviewService {
         }
         return reviews;
     }
+    public List<Review> getReviewsByMovieId(int movieId) {
+        List<Review> reviews = new ArrayList<>();
+        String sql = "SELECT * FROM Reviews WHERE movie_id = ?";
+        try (Connection conn = DbFunctions.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, movieId);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                // Assuming a method that converts a ResultSet row to a Review object
+                Review review = resultSetToReview(rs);
+                reviews.add(review);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return reviews;
+    }
 
     // Method to add a Review by a User
     public boolean addReview(int userId, Review review) {

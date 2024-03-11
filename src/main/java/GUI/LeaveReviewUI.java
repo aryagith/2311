@@ -9,6 +9,7 @@ public class LeaveReviewUI extends JFrame {
     private final JPanel contentPanel;
     private final Movie movie;
     private final User user;
+    private JSlider ratingSlider;
     public LeaveReviewUI(User user, Movie movie) {
         this.user = user;
         this.movie = movie;
@@ -38,7 +39,7 @@ public class LeaveReviewUI extends JFrame {
     private JPanel createRatingPanel() {
         JPanel ratingPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JLabel ratingLabel = new JLabel("Rating: ");
-        JSlider ratingSlider = new JSlider(1, 5,1);
+        ratingSlider = new JSlider(1, 5,1);
         ratingSlider.setMajorTickSpacing(1);
         ratingSlider.setPaintLabels(true);
         ratingPanel.add(ratingLabel);
@@ -53,16 +54,20 @@ public class LeaveReviewUI extends JFrame {
         publishButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openReviewsUI(user);
-                    String commentText = reviewArea.getText();
+                String commentText = reviewArea.getText();
+                int rating = ratingSlider.getValue();
+                Review review = new Review(0, user.getUserId(), movie.getMovieId(), commentText, rating);
+                createReview(user.getUserId(), review);
+                reviewArea.setText("");
+                openReviewsUI(movie);
                 }
         });
         reviewPanel.add(reviewArea);
         reviewPanel.add(publishButton);
         return reviewPanel;
     }
-    public void openReviewsUI (User user){
-        ReviewsUI reviewUI = new ReviewsUI(user);
+    public void openReviewsUI (Movie movie){
+        ReviewsUI reviewUI = new ReviewsUI(movie);
         reviewUI.setVisible(true);
     }
     public void createReview(int userId, Review review) {
