@@ -1,23 +1,35 @@
 package GUI.Dashboard;
 
-import Models.User;
-
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+//import Services.MovieManager;
 
+import Models.*;
+import Services.*;;
+
+import org.json.JSONException;
 public class FriendsPanel extends JPanel {
-    public FriendsPanel(User user) {
-        setLayout(new BorderLayout());
-        JLabel friendsLabel = new JLabel("Friends:");
-        friendsLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        add(friendsLabel, BorderLayout.NORTH);
-
-        JPanel friendsListPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        for (User friend : user.getFriendsList()) {
-            JButton friendButton = new JButton(friend.getUsername());
-            friendButton.addActionListener(e -> JOptionPane.showMessageDialog(this, "You clicked on " + friend.getUsername()));
-            friendsListPanel.add(friendButton);
-        }
-        add(friendsListPanel, BorderLayout.CENTER);
+    private JPanel createSfPanel() {
+        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JTextField searchField = new JTextField(10);
+        JButton searchButton = new JButton("Add Friend");
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = searchField.getText();
+                FriendService.addFriend(searchText);
+            }
+        });
+        searchPanel.add(searchField);
+        searchPanel.add(searchButton);
+        return searchPanel;
     }
 }

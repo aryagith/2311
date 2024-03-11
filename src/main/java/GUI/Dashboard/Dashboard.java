@@ -2,12 +2,16 @@ package GUI.Dashboard;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLException;
 import java.util.List;
 
 import GUI.BrowseMovieUI;
 import Models.Movie;
 import Models.User;
-import Services.MovieService;
+import Services.*;
+
+import java.awt.event.*;
+
 
 public class Dashboard extends JFrame {
     private static Dashboard instance;
@@ -20,7 +24,7 @@ public class Dashboard extends JFrame {
     private CenterPanel centerPanel;
     private FriendsPanel friendsPanel;
 
-    public Dashboard(User user) {
+    public Dashboard(User user) throws SQLException {
         this.user = user;
         setTitle("Dashboard");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -35,6 +39,8 @@ public class Dashboard extends JFrame {
         searchPanel = new SearchPanel();
         recentlyViewedPanel = new RecentlyViewedPanel(user);
         centerPanel = new CenterPanel(movieService, user, this);
+        JPanel friendsPanel = FriendService.createFriendsPanel();
+        JPanel searchFriendsPanel = createSfPanel();
 //        friendsPanel = new FriendsPanel(user);
 
         // Add the panels to the main panel
@@ -47,6 +53,8 @@ public class Dashboard extends JFrame {
         JPanel centralPanel = new JPanel(new BorderLayout());
         centralPanel.add(recentlyViewedPanel, BorderLayout.WEST);
         centralPanel.add(centerPanel, BorderLayout.CENTER);
+        centralPanel.add(searchFriendsPanel, BorderLayout.PAGE_END);
+        centralPanel.add(friendsPanel, BorderLayout.EAST);
 //        centralPanel.add(friendsPanel, BorderLayout.EAST);
 
         mainPanel.add(centralPanel);
@@ -70,5 +78,20 @@ public class Dashboard extends JFrame {
 
     public RecentlyViewedPanel getRecentlyViewedPanel() {
         return recentlyViewedPanel;
+    }
+    private JPanel createSfPanel() {
+        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JTextField searchField = new JTextField(10);
+        JButton searchButton = new JButton("Add Friend");
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = searchField.getText();
+                FriendService.addFriend(searchText);
+            }
+        });
+        searchPanel.add(searchField);
+        searchPanel.add(searchButton);
+        return searchPanel;
     }
 }

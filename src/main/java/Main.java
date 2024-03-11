@@ -10,6 +10,7 @@ import org.json.JSONException;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +21,11 @@ public class Main {
                 SwingUtilities.invokeLater(new Runnable() {
             public void run() {
 //                new LoginUI();
-                new Dashboard(user);
+                try {
+                    new Dashboard(user);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 

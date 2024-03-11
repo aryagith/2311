@@ -15,7 +15,7 @@ public class User {
     CommentService commentService = new CommentService();
     RecentlyViewdService recentlyViewdService = new RecentlyViewdService();
     private int userId;
-    private String username;
+    private static String username;
     private String password;
     private List<Movie> watchlist;
     private List<Review> reviews;
@@ -56,7 +56,7 @@ public class User {
     }
 
     // Getters and setters
-    public String getUsername() {
+    public static String getUsername() {
         return username;
     }
 

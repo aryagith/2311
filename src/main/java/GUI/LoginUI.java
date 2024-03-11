@@ -33,7 +33,13 @@ public class LoginUI extends JFrame {
         panel.add(passwordField);
 
         loginButton = new JButton("Login");
-        loginButton.addActionListener(e -> login());
+        loginButton.addActionListener(e -> {
+            try {
+                login();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
         panel.add(loginButton);
 
         registerButton = new JButton("Register");
@@ -44,7 +50,7 @@ public class LoginUI extends JFrame {
         setVisible(true);
     }
 
-    private void login() {
+    private void login() throws SQLException {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword());
         User user = userService.authenticateUser(username, password);
