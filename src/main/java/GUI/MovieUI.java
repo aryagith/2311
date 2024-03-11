@@ -75,8 +75,7 @@ public class MovieUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Logic to handle leaving review
-                JOptionPane.showMessageDialog(MovieUI.this, "Leave Review button clicked");
-            }
+                openLeaveReviewUI(user, movie);            }
         });
         buttonPanel.add(leaveReviewButton);
 
@@ -126,6 +125,9 @@ public class MovieUI extends JFrame {
         setTitle("Movie Details: " + movie.getTitle());
         populateMovieDetails();
     }
-
-
+    public void openLeaveReviewUI (User user, Movie movie){
+        LeaveReviewUI reviewUI = new LeaveReviewUI(user, movie);
+        reviewUI.setVisible(true);
+    }
 }
+

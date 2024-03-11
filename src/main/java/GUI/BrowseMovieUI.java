@@ -23,7 +23,7 @@ public class BrowseMovieUI extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 600);
 
-        searchResultsPanel = new JPanel(new GridLayout(0, 3)); // 3 columns grid layout
+        searchResultsPanel = new JPanel(new GridLayout(0, 3));
         JScrollPane scrollPane = new JScrollPane(searchResultsPanel);
         getContentPane().add(scrollPane, BorderLayout.CENTER);
         setVisible(true);
