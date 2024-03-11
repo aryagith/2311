@@ -1,0 +1,256 @@
+Index: src/main/java/Services/DbFunctions.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Services;\r\n\r\nimport java.sql.Connection;\r\nimport java.sql.DriverManager;\r\nimport java.sql.SQLException;\r\n\r\npublic class DbFunctions {\r\n\r\n    // Private constructor to prevent instantiation.\r\n    private DbFunctions() {}\r\n\r\n    public static Connection connect() {\r\n        // Assuming dbPath is your SQLite database path.\r\n        String dbPath = \"/Users/ahmedel-dib/Desktop/project2311/2311/src/main/resources/movie.db\";\r\n        try {\r\n            // Create a new connection to the database.\r\n            Connection connection = DriverManager.getConnection(\"jdbc:sqlite:\" + dbPath);\r\n            System.out.println(\"Connected to DB\");\r\n            return connection;\r\n        } catch (SQLException e) {\r\n            System.out.println(\"Connection failed: \" + e.getMessage());\r\n            return null;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Services/DbFunctions.java b/src/main/java/Services/DbFunctions.java
+--- a/src/main/java/Services/DbFunctions.java	
++++ b/src/main/java/Services/DbFunctions.java	
+@@ -11,7 +11,7 @@
+ 
+     public static Connection connect() {
+         // Assuming dbPath is your SQLite database path.
+-        String dbPath = "/Users/ahmedel-dib/Desktop/project2311/2311/src/main/resources/movie.db";
++        String dbPath = "C:\\Users\\krish\\Downloads\\2311\\2311\\src\\main\\resources\\movie.db";
+         try {
+             // Create a new connection to the database.
+             Connection connection = DriverManager.getConnection("jdbc:sqlite:" + dbPath);
+Index: src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import GUI.LoginUI;\r\nimport Models.Movie;\r\nimport Services.DbFunctions;\r\nimport Services.MovieManager;\r\nimport Services.MovieService;\r\nimport org.json.JSONException;\r\n\r\nimport javax.swing.*;\r\nimport java.io.IOException;\r\nimport java.util.Arrays;\r\nimport java.util.List;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        SwingUtilities.invokeLater(new Runnable() {\r\n            public void run() {\r\n                new LoginUI();\r\n            }\r\n        });\r\n\r\n//        List<String> newCommonWords = Arrays.asList(\r\n//                \"Woman\", \"Child\", \"Adventure\", \"Quest\", \"Secret\", \"Mystery\", \"Magic\", \"Witch\",\r\n//                \"Wizard\", \"Dragon\", \"Forest\", \"Desert\", \"Island\", \"Castle\", \"Tower\", \"Moon\",\r\n//                \"Sun\", \"Galaxy\", \"Alien\", \"Robot\", \"Future\", \"Past\", \"Legend\", \"Myth\", \"Hero\",\r\n//                \"Villain\", \"Escape\", \"Chase\", \"Race\", \"Battle\", \"Mission\", \"Dreams\", \"Nightmare\",\r\n//                \"Love\", \"Hate\", \"Fear\", \"Courage\", \"Friendship\", \"Betrayal\", \"Survival\", \"Death\",\r\n//                \"Life\", \"Joy\", \"Sorrow\", \"Fate\", \"Destiny\", \"Time\", \"Memory\", \"Ghost\", \"Spirit\"\r\n//        );\r\n//MovieService ms = new MovieService();\r\n//        MovieManager mm = new MovieManager();\r\n//        for (String word:newCommonWords){\r\n//            try {\r\n//                List<Movie> movies = mm.searchMovies(word);\r\n//                for (Movie movie : movies) {\r\n//                    ms.createMovie(movie);\r\n//                    System.out.println(movie.getMovieId());\r\n//\r\n//                }\r\n//            } catch (IOException e) {\r\n//                throw new RuntimeException(e);\r\n//            } catch (JSONException e) {\r\n//                throw new RuntimeException(e);\r\n//            }\r\n//        }\r\n\r\n//        DbFunctions.getConnection();\r\n//        MovieManager movieManager = new MovieManager();\r\n//        try {\r\n//            List<Movie> movies = movieManager.searchMovies(\"Avengers\");\r\n//            for (Movie movie : movies) {\r\n//                System.out.println(\"Title: \" + movie.getTitle());\r\n//                System.out.println(\"Release Year: \" + movie.getReleaseYear());\r\n//                System.out.println(\"Description: \" + movie.getDescription());\r\n//                System.out.println(\"Rating: \" + movie.getRating());\r\n//                System.out.println(\"Cover Image URL: \" + movie.getCoverImageUrl());\r\n//                System.out.println();\r\n//            }\r\n//        } catch (IOException e) {\r\n//            e.printStackTrace();\r\n//        }\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Main.java b/src/main/java/Main.java
+--- a/src/main/java/Main.java	
++++ b/src/main/java/Main.java	
+@@ -1,7 +1,7 @@
+ import GUI.LoginUI;
+ import Models.Movie;
+ import Services.DbFunctions;
+-import Services.MovieManager;
++//import Services.MovieManager;
+ import Services.MovieService;
+ import org.json.JSONException;
+ 
+Index: src/main/java/Models/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Models;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class User {\r\n    private int userId;\r\n    private String username;\r\n    private String password;\r\n    private List<Movie> watchlist;\r\n    private List<Review> reviews;\r\n\r\n    private List<Comment> comments;\r\n    private List<User> friendsList;\r\n    private List<Movie> recentlyViewed;\r\n\r\n\r\n    // Constructor\r\n    public User(String username, String password) {\r\n        this.userId = 0;\r\n        this.username = username;\r\n        this.password = password;\r\n        this.watchlist = new ArrayList<>();;\r\n        this.reviews = new ArrayList<>();\r\n        this.comments = new ArrayList<>();\r\n        this.friendsList = new ArrayList<>();\r\n        this.recentlyViewed = new ArrayList<>();\r\n    }\r\n\r\n    public User(String username){\r\n        this.userId = 0;\r\n        this.username = username;\r\n//        this.password = \"friend\";\r\n//        this.watchlist = new ArrayList<>();;\r\n//        this.reviews = new ArrayList<>();\r\n//        this.comments = new ArrayList<>();\r\n//        this.friendsList = new ArrayList<>();\r\n        this.recentlyViewed = new ArrayList<>();\r\n    }\r\n\r\n    public int getUserId() {\r\n        return userId;\r\n    }\r\n    public void setUserId(int userId) {\r\n        this.userId = userId;\r\n    }\r\n\r\n    // Getters and setters\r\n    public String getUsername() {\r\n        return username;\r\n    }\r\n\r\n    public void setUsername(String username) {\r\n        this.username = username;\r\n    }\r\n\r\n    public String getPassword() {\r\n        return password;\r\n    }\r\n\r\n    public void setPassword(String password) {\r\n        this.password = password;\r\n    }\r\n\r\n    public List<Movie> getWatchlist() {\r\n        return watchlist;\r\n    }\r\n\r\n    public void setWatchlist(List<Movie> watchlist) {\r\n        this.watchlist = watchlist;\r\n    }\r\n\r\n    public List<Review> getReviews() {\r\n        return reviews;\r\n    }\r\n\r\n    public void setReviews(List<Review> reviews) {\r\n        this.reviews = reviews;\r\n    }\r\n\r\n    public List<Comment> getComments() {\r\n        return comments;\r\n    }\r\n\r\n    public void setComments(List<Comment> comments) {\r\n        this.comments = comments;\r\n    }\r\n\r\n    public List<User> getFriendsList() {\r\n        return friendsList;\r\n    }\r\n\r\n    public void setFriendsList(List<User> friendsList) {\r\n        this.friendsList = friendsList;\r\n    }\r\n\r\n    public List<Movie> getRecentlyViewed() {\r\n        return recentlyViewed;\r\n    }\r\n\r\n    public void setRecentlyViewed(List<Movie> recentlyViewed) {\r\n        this.recentlyViewed = recentlyViewed;\r\n    }\r\n\r\n    public void addFriend(User friend){\r\n        this.friendsList.add(friend);\r\n    }\r\n\r\n    public void addReview(Review review){\r\n        this.reviews.add(review);\r\n    }\r\n\r\n    public void addComment(Comment comment){\r\n        this.comments.add(comment);\r\n    }\r\n\r\n    public void addRecentlyViewed(Movie movie) {\r\n        // Add the new movie to the beginning of the list\r\n        recentlyViewed.add(0, movie);\r\n\r\n        // Check if the list exceeds the maximum length of 5\r\n        if (recentlyViewed.size() > 5) {\r\n            // Remove the oldest movie (at index 5)\r\n            recentlyViewed.remove(5);\r\n        }\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Models/User.java b/src/main/java/Models/User.java
+--- a/src/main/java/Models/User.java	
++++ b/src/main/java/Models/User.java	
+@@ -5,7 +5,7 @@
+ 
+ public class User {
+     private int userId;
+-    private String username;
++    private static String username;
+     private String password;
+     private List<Movie> watchlist;
+     private List<Review> reviews;
+@@ -46,7 +46,7 @@
+     }
+ 
+     // Getters and setters
+-    public String getUsername() {
++    public static String getUsername() {
+         return username;
+     }
+ 
+Index: src/main/java/GUI/LoginUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport Models.User;\r\nimport Services.DbFunctions;\r\nimport Services.UserService;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport java.sql.*;\r\n\r\npublic class LoginUI extends JFrame {\r\n    private JTextField usernameField;\r\n    private JPasswordField passwordField;\r\n    private JButton loginButton;\r\n    private JButton registerButton;\r\n    private UserService userService = new UserService();\r\n    public LoginUI() {\r\n        setTitle(\"Login\");\r\n        setSize(300, 200);\r\n        setDefaultCloseOperation(EXIT_ON_CLOSE);\r\n        setLocationRelativeTo(null);\r\n\r\n        JPanel panel = new JPanel(new GridLayout(4, 2));\r\n\r\n        panel.add(new JLabel(\"Username:\"));\r\n        usernameField = new JTextField();\r\n        panel.add(usernameField);\r\n\r\n        panel.add(new JLabel(\"Password:\"));\r\n        passwordField = new JPasswordField();\r\n        panel.add(passwordField);\r\n\r\n        loginButton = new JButton(\"Login\");\r\n        loginButton.addActionListener(e -> login());\r\n        panel.add(loginButton);\r\n\r\n        registerButton = new JButton(\"Register\");\r\n        registerButton.addActionListener(e -> showRegistrationForm());\r\n        panel.add(registerButton);\r\n\r\n        add(panel);\r\n        setVisible(true);\r\n    }\r\n\r\n    private void login() {\r\n        String username = usernameField.getText();\r\n        String password = new String(passwordField.getPassword());\r\n        User user = userService.authenticateUser(username, password);\r\n        if (user != null) {\r\n            JOptionPane.showMessageDialog(this, \"Login successful\");\r\n            System.out.println(user.getUserId());\r\n            DashboardUI dash = new DashboardUI(user);\r\n        } else {\r\n            JOptionPane.showMessageDialog(this, \"Invalid username or password\");\r\n        }\r\n    }\r\n\r\n    private boolean authenticateUser(String username, String password) {\r\n        try (Connection conn = DbFunctions.connect()) {\r\n            PreparedStatement stmt = conn.prepareStatement(\"SELECT * FROM users WHERE username = ? AND password = ?\");\r\n            stmt.setString(1, username);\r\n            stmt.setString(2, password);\r\n            ResultSet rs = stmt.executeQuery();\r\n            return rs.next();\r\n        } catch (SQLException e) {\r\n            e.printStackTrace();\r\n            return false;\r\n        }\r\n    }\r\n\r\n    private void showRegistrationForm() {\r\n        JDialog registrationDialog = new JDialog(this, \"Register\", true);\r\n        registrationDialog.setLayout(new GridLayout(3, 2));\r\n        registrationDialog.setSize(300, 150);\r\n        registrationDialog.setLocationRelativeTo(this);\r\n\r\n        registrationDialog.add(new JLabel(\"Username:\"));\r\n        JTextField regUsernameField = new JTextField();\r\n        registrationDialog.add(regUsernameField);\r\n\r\n        registrationDialog.add(new JLabel(\"Password:\"));\r\n        JPasswordField regPasswordField = new JPasswordField();\r\n        registrationDialog.add(regPasswordField);\r\n\r\n        JButton registerConfirmButton = new JButton(\"Register\");\r\n        registerConfirmButton.addActionListener(e -> registerUser(regUsernameField.getText(), new String(regPasswordField.getPassword()), registrationDialog));\r\n        registrationDialog.add(registerConfirmButton);\r\n\r\n        registrationDialog.setVisible(true);\r\n    }\r\n\r\n    private void registerUser(String username, String password, JDialog dialog) {\r\n        User newUser = new User(username, password);\r\n\r\n            if(userService.createUser(newUser)) {\r\n                JOptionPane.showMessageDialog(this, \"Registration successful\");\r\n                dialog.dispose(); // Close the registration dialog after successful registration\r\n            } else {\r\n                JOptionPane.showMessageDialog(this, \"Registration failed\");\r\n            }\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/GUI/LoginUI.java b/src/main/java/GUI/LoginUI.java
+--- a/src/main/java/GUI/LoginUI.java	
++++ b/src/main/java/GUI/LoginUI.java	
+@@ -32,7 +32,13 @@
+         panel.add(passwordField);
+ 
+         loginButton = new JButton("Login");
+-        loginButton.addActionListener(e -> login());
++        loginButton.addActionListener(e -> {
++            try {
++                login();
++            } catch (SQLException ex) {
++                throw new RuntimeException(ex);
++            }
++        });
+         panel.add(loginButton);
+ 
+         registerButton = new JButton("Register");
+@@ -43,7 +49,7 @@
+         setVisible(true);
+     }
+ 
+-    private void login() {
++    private void login() throws SQLException {
+         String username = usernameField.getText();
+         String password = new String(passwordField.getPassword());
+         User user = userService.authenticateUser(username, password);
+Index: src/main/java/Services/FriendService.java
+===================================================================
+diff --git a/src/main/java/Services/FriendService.java b/src/main/java/Services/FriendService.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/Services/FriendService.java	
+@@ -0,0 +1,148 @@
++package Services;
++import Models.*;
++
++import javax.swing.*;
++import java.awt.*;
++import java.sql.*;
++import java.util.ArrayList;
++import java.util.List;
++
++public class FriendService {
++    static DefaultListModel<String> listModel = new DefaultListModel<>();
++    public static boolean addFriend(String s) {
++        String sql = "INSERT INTO Friends_Test (User, Friend) VALUES (?,?)";
++        String reverseSql = "INSERT INTO Friends_Test (User, Friend) VALUES (?,?)";
++
++        try (Connection conn = DbFunctions.connect();
++
++
++             PreparedStatement pstmt = conn.prepareStatement(sql);
++             PreparedStatement reversePstmt = conn.prepareStatement(reverseSql)) {
++
++
++            pstmt.setString(1, User.getUsername());
++            pstmt.setString(2, s);
++            int affectedRows = pstmt.executeUpdate();
++
++
++            reversePstmt.setString(1, s);
++            reversePstmt.setString(2, User.getUsername());
++            refreshFriendsList(User.getUsername(), listModel);
++            int reverseAffectedRows = reversePstmt.executeUpdate();
++
++
++            return (affectedRows > 0 && reverseAffectedRows > 0);
++        }
++
++        catch (SQLException e) {
++            e.printStackTrace();
++            return false;
++        }
++    }
++    public static void refreshFriendsList(String username, DefaultListModel<String> listModel) {
++        listModel.clear();
++
++
++        ArrayList<String> friends = retrieveFriendsFromDatabase(username);
++
++
++        for (String friend : friends) {
++            listModel.addElement(friend);
++        }
++    }
++    public static ArrayList<String> retrieveFriendsFromDatabase(String username) {
++        ArrayList<String> friends = new ArrayList<>();
++        String sql = "SELECT Friend FROM Friends_Test WHERE User = ?";
++
++        try (Connection conn = DbFunctions.connect();
++             PreparedStatement pstmt = conn.prepareStatement(sql)) {
++
++            pstmt.setString(1, username);
++            ResultSet resultSet = pstmt.executeQuery();
++
++            while (resultSet.next()) {
++                String friend = resultSet.getString("Friend");
++                friends.add(friend);
++            }
++        } catch (SQLException e) {
++            e.printStackTrace();
++        }
++
++        return friends;
++    }
++    public static List<User> getFriends(String namePart) {
++        List<User> friends = new ArrayList<>();
++        String sql = "SELECT Friend FROM Friends_Test ";
++        try (Connection conn = DbFunctions.connect();
++             PreparedStatement pstmt = conn.prepareStatement(sql)) {
++
++            ResultSet rs = pstmt.executeQuery();
++            while (rs.next()) {
++                User u1 = resultSetToFriends(rs);
++                friends.add(u1);
++            }
++        } catch (SQLException e) {
++            e.printStackTrace();
++        }
++        return friends;
++    }
++
++    private static User resultSetToFriends(ResultSet rs) throws SQLException {
++        User u1 = new User(
++                rs.getString("Friend")
++        );
++        return u1;
++    }
++    public static JPanel createFriendsPanel() throws SQLException {
++      /*  JPanel friendsPanel = new JPanel(new BorderLayout());
++        JLabel friendsLabel = new JLabel("Friends:");
++        friendsLabel.setFont(new Font("Arial", Font.BOLD, 16));
++        friendsPanel.add(friendsLabel, BorderLayout.NORTH);
++        JPanel friendsListPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
++        for (User friend : user.getFriendsList()) {
++            JButton friendButton = new JButton(friend.getUsername());
++            friendButton.addActionListener(new ActionListener() {
++                @Override
++                public void actionPerformed(ActionEvent e) {
++                    JOptionPane.showMessageDialog(DashboardUI.this, "You clicked on " + friend.getUsername());
++                }
++            });
++            friendsListPanel.add(friendButton);
++        }
++        friendsPanel.add(friendsListPanel, BorderLayout.CENTER);
++        return friendsPanel; */
++
++       /* JPanel friendsPanel = new JPanel(new BorderLayout());
++        JLabel friendsLabel = new JLabel("Friends:");
++        friendsLabel.setFont(new Font("Arial", Font.BOLD, 16));
++        friendsPanel.add(friendsLabel, BorderLayout.NORTH);
++        JPanel friendsListPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
++        String sql = "SELECT Friend from Friends_Test WHERE USER = (USER) VALUES(?)";
++        try (Connection conn = DbFunctions.connect();
++             PreparedStatement pstmt = conn.prepareStatement(sql))
++            {
++                pstmt.setString(1,User.getUsername());
++                int affectedRows = pstmt.executeUpdate();
++
++            }
++
++    } */
++        JPanel panel = new JPanel(new BorderLayout());
++
++        // Heading Label
++        JLabel headingLabel = new JLabel("Friends:");
++        headingLabel.setFont(new Font("Arial", Font.BOLD, 16));
++        panel.add(headingLabel, BorderLayout.NORTH);
++
++
++        JList<String> friendsList = new JList<>(listModel);
++
++        JScrollPane scrollPane = new JScrollPane(friendsList);
++        panel.add(scrollPane, BorderLayout.CENTER);
++
++
++        FriendService.refreshFriendsList(User.getUsername(), listModel);
++
++        return panel;
++    }
++}
+\ No newline at end of file
