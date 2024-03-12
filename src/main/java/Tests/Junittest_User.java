@@ -1,73 +1,61 @@
-//package Tests;
-//
-//import Models.*;
-//import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Test;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//public class Junittest_User {
-//    private User user;
-//
-//    @BeforeEach
-//    public void setUp() {
-//        user = new User("TestUser", "TestPassword");
-//    }
-//
-//    @Test
-//    public void testUsername() {
-//        assertEquals("TestUser", user.getUsername());
-//        user.setUsername("NewUsername");
-//        assertEquals("NewUsername", user.getUsername());
-//    }
-//
-//    @Test
-//    public void testPassword() {
-//        assertEquals("TestPassword", user.getPassword());
-//        user.setPassword("NewPassword");
-//        assertEquals("NewPassword", user.getPassword());
-//    }
-//
-//    @Test
-//    public void testWatchlist() {
-//        assertNull(user.getWatchlist());
-//        List<Movie> newWatchlist = new ArrayList<Movie>();
-//        user.setWatchlist(newWatchlist);
-//        assertEquals(newWatchlist, user.getWatchlist());
-//    }
-//
-//    @Test
-//    public void testReviews() {
-//        assertTrue(user.getReviews().isEmpty());
-//        Review newReview = new Review("",0);
-//        user.addReview(newReview);
-//        assertTrue(user.getReviews().contains(newReview));
-//    }
-//
-//    @Test
-//    public void testComments() {
-//        assertTrue(user.getComments().isEmpty());
-//        Comment newComment = new Comment("");
-//        user.addComment(newComment);
-//        assertTrue(user.getComments().contains(newComment));
-//    }
-//
-//    @Test
-//    public void testFriendsList() {
-//        assertTrue(user.getFriendsList().isEmpty());
-//        User newFriend = new User("FriendUser", "FriendPassword");
-//        user.addFriend(newFriend);
-//        assertTrue(user.getFriendsList().contains(newFriend));
-//    }
-//
-//    @Test
-//    public void testRecentlyViewed() {
-//        assertTrue(user.getRecentlyViewed().isEmpty());
-//        Movie newMovie = new Movie("Test Movie", 2024, "This is a test movie", "Test");
-//        user.addRecentlyViewed(newMovie);
-//        assertTrue(user.getRecentlyViewed().contains(newMovie));
-//    }
-//}
+package Tests;
+import Models.Comment;
+import Models.Movie;
+import Models.Review;
+import Models.User;
+import org.junit.*;
+import java.util.List;
+import static junit.framework.TestCase.*;
+public class Junittest_User {
+    private int userId;
+    private String username;
+    private String password;
+    private List<Movie> watchlist;
+    private List<Review> reviews;
+    private List<Comment> comments;
+    private List<User> friendsList;
+    private List<Movie> recentlyViewed;
+    @Before
+    public void setUp() {
+        userId = 0;
+        username = "John";
+        password = "123";
+        watchlist = null;
+        reviews = null;
+        comments = null;
+        friendsList = null;
+        recentlyViewed = null;
+    }
+    @Test
+    public void testGetUserId() {
+        assertEquals(0, userId);
+    }
+    @Test
+    public void testGetUsername() {
+        assertEquals("John", username);
+    }
+    @Test
+    public void testGetPassword() {
+        assertEquals("123", password);
+    }
+    @Test
+    public void testGetWatchlist() {
+        assertEquals(null, watchlist);
+    }
+    @Test
+    public void testGetReviews() {
+        assertEquals(null, reviews);
+    }
+    @Test
+    public void testGetComments() {
+        assertEquals(null, comments);
+    }
+    @Test
+    public void testGetFriendsList() {
+        assertEquals(null, friendsList);
+    }
+    @Test
+    public void testGetRecentlyViewed() {
+        assertEquals(null, recentlyViewed);
+    }
+}

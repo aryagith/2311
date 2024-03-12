@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6384baf-0a21-4a12-b447-4736d7fd9193" name="Changes" comment="&quot;added center panel and movie recommendation system to dashboard, still need to fix layout&quot;">
+    <list default="true" id="e6384baf-0a21-4a12-b447-4736d7fd9193" name="Changes" comment="Review and LeaveReview GUI set up and fucntioning.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_MovieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_RecentlyViewdService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_ReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LeaveReviewUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/LeaveReviewUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ReviewsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ReviewsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/Junittest_Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/Junittest_Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/Junittest_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/Junittest_User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/movie.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/movie.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +55,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.Junittest_Comment.executor": "Run",
+    "JUnit.Junittest_CommentService.executor": "Coverage",
+    "JUnit.Junittest_Movie.executor": "Run",
+    "JUnit.Junittest_Review.executor": "Coverage",
+    "JUnit.Junittest_User.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -60,10 +70,41 @@
     "settings.editor.selected.configurable": "com.diffblue.cover.intellij"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Junittest_CommentService.testGetCommentsByUserId">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Junittest_CommentService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.Junittest_CommentService" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Junittest_CommentService.testGetCommentsByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.Junittest_CommentService" />
+      <option name="METHOD_NAME" value="testGetCommentsByUserId" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,11 +122,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Junittest_CommentService.testGetCommentsByUserId" />
+        <item itemvalue="JUnit.Junittest_CommentService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -171,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710135054365</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="&quot;added center panel and movie recommendation system to dashboard, still need to fix layout&quot;">
+      <option name="closed" value="true" />
+      <created>1710139633718</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710139633718</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,5 +248,13 @@
     <MESSAGE value="backup" />
     <MESSAGE value="&quot;added center panel and movie recommendation system to dashboard, still need to fix layout&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;added center panel and movie recommendation system to dashboard, still need to fix layout&quot;" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2311test$Junittest_Review.ic" NAME="Junittest_Review Coverage Results" MODIFIED="1710205333657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/2311test$Junittest_CommentService.ic" NAME="Junittest_CommentService Coverage Results" MODIFIED="1710206247934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Tests.*</FILTER>
+    </SUITE>
   </component>
 </project>
