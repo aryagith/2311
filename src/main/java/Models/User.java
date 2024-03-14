@@ -48,6 +48,10 @@ public class User {
         this.recentlyViewed = new ArrayList<>();
     }
 
+    public User(int testUserId, Object o, Object o1) {
+
+    }
+
     public int getUserId() {
         return userId;
     }

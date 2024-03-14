@@ -37,6 +37,11 @@ public class Movie {
         this.movieId = 0;
     }
 
+    public Movie(int testMovieId, Object o, int i, Object genre, Object rating, double v) {
+
+
+    }
+
     public int getMovieId() {
         return movieId;
     }
