@@ -1,4 +1,6 @@
 package GUI.Dashboard;
+import GUI.Reviews.ReviewsUI;
+import Models.Movie;
 import Models.User;
 import Services.DbFunctions;
 import Services.FriendService;
@@ -126,6 +128,10 @@ public class FriendsPanel extends JPanel {
             e.printStackTrace();
         }
         return username;
+    }
+    public void openDMUI (Movie movie) {
+        ReviewsUI reviewUI = new ReviewsUI(movie);
+        reviewUI.setVisible(true);
     }
 }
 

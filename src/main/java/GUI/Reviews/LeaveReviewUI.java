@@ -1,5 +1,6 @@
-package GUI;
+package GUI.Reviews;
 
+import GUI.Reviews.ReviewsUI;
 import Models.Movie;
 import Models.Review;
 import Models.User;
@@ -61,7 +62,9 @@ public class LeaveReviewUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String commentText = reviewArea.getText();
                 int rating = ratingSlider.getValue();
-                Review review = new Review(0, user.getUserId(), movie.getMovieId(), commentText, rating);
+                int likes = 0;
+                int dislikes = 0;
+                Review review = new Review(0, user.getUserId(), movie.getMovieId(), commentText, rating, likes, dislikes);
                 createReview(user.getUserId(), review);
                 reviewArea.setText("");
                 openReviewsUI(movie);

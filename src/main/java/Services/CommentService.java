@@ -34,7 +34,7 @@ public class CommentService {
         return comments;
     }
 
-    public boolean addComment(int userId, Comment comment) {
+    public static boolean addComment(int userId, Comment comment) {
         String sql = "INSERT INTO Comments (user_id, comment_text, upvotes, downvotes) VALUES (?, ?, ?, ?)";
         try (Connection conn = DbFunctions.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -50,4 +50,35 @@ public class CommentService {
     }
 
 
+    public List<Comment> getCommentsByReviewId(int reviewId) {
+        List<Comment> comments = new ArrayList<>();
+        String sql = "SELECT * FROM Comments WHERE review_id = ?";
+        try (Connection conn = DbFunctions.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, reviewId);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Comment comment = resultSetToComment(rs);
+                comments.add(comment);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return comments;
+    }
+
+    public String getUsernameByComment(Comment comment) {
+        int userID = comment.getUserId();
+        String sql = "SELECT * FROM Users WHERE user_id = ?";
+        String username = null;
+        try (Connection conn = DbFunctions.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, userID);
+            ResultSet rs = pstmt.executeQuery();
+            username = rs.getString("username");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return username;
+    }
 }

@@ -1,5 +1,7 @@
 package GUI;
 
+import GUI.Reviews.LeaveReviewUI;
+import GUI.Reviews.ReviewsUI;
 import Models.Movie;
 import Models.User;
 
