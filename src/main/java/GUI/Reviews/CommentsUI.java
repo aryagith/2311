@@ -5,6 +5,8 @@ import Models.Review;
 import Models.User;
 import Services.CommentService;
 import Services.ReviewService;
+import Services.UserService;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,9 +16,8 @@ import java.util.List;
 public class CommentsUI extends JFrame {
     private JTextArea parentReviewArea;
     private JTextArea commentTextArea;
-    private final User user;
-
-
+    private UserService userService;
+    private User user;
     public CommentsUI(Review review, User user) {
         this.user = user;
         setTitle("Comment Section");
@@ -26,18 +27,19 @@ public class CommentsUI extends JFrame {
         parentReviewArea.setEditable(false);
         commentTextArea = new JTextArea();
         JButton addCommentButton = new JButton("Add Comment");
+        userService = new UserService();
         addCommentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String commentText = commentTextArea.getText();
-                Comment comment = new Comment(0, user.getUserId(), commentText, 0,0);
-                createComment(user.getUserId(), comment);
-                commentTextArea.setText("");
+                openLeaveCommentUI(review, user);
+                dispose();
             }
         });
-        JPanel commentPanel = new JPanel(new BorderLayout());
-        commentPanel.add(commentTextArea, BorderLayout.CENTER);
-        commentPanel.add(addCommentButton, BorderLayout.LINE_END);
+
+        JPanel commentPanel = new JPanel(new FlowLayout(FlowLayout.LEFT)); // Arrange components horizontally
+        commentPanel.add(commentTextArea);
+        commentPanel.add(addCommentButton);
+
         setLayout(new BorderLayout());
         add(new JScrollPane(parentReviewArea), BorderLayout.NORTH);
         add(new JScrollPane(commentTextArea), BorderLayout.CENTER);
@@ -59,21 +61,20 @@ public class CommentsUI extends JFrame {
 
     private void displayComments(int reviewId) {
         commentTextArea.setText("");
-        Services.CommentService commentService = new Services.CommentService();
+        CommentService commentService = new CommentService();
         try {
             List<Comment> comments = commentService.getCommentsByReviewId(reviewId);
             for (Comment comment : comments) {
                 commentTextArea.append("User: " + commentService.getUsernameByComment(comment) + "\n");
-                commentTextArea.append("Rating: " + comment.getCommentText() + "\n\n");
+                commentTextArea.append(comment.getCommentText() + "\n\n");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error fetching reviews: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-
-    public void createComment(int userId, Comment comment) {
-        CommentService commentService = new CommentService();
-        CommentService.addComment(userId, comment);
+    private void openLeaveCommentUI(Review review, User user) {
+        LeaveCommentUI leaveCommentUIUI = new LeaveCommentUI(user, review);
+        leaveCommentUIUI.setVisible(true);
     }
 }

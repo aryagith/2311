@@ -4,6 +4,8 @@ import Models.Movie;
 import Models.Review;
 import Models.User;
 import Services.ReviewService;
+import Services.UserService;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,7 +18,7 @@ public class ReviewsUI extends JFrame {
     private User user;
     private JPanel reviewsPanel;
 
-    public ReviewsUI(Movie movie) {
+    public ReviewsUI(Movie movie, User user) {
         this.movie = movie;
         this.user = user;
         setTitle("Reviews for " + movie.getTitle());
@@ -95,9 +97,7 @@ public class ReviewsUI extends JFrame {
         reviewsPanel.repaint();
         }
     public void openCommentsUI (Review review, User user){
-        User currentUser = getCurrentUser(); // Get the current user from somewhere
-        Review review = Review.getReview(); // Get the review for which comments are being displayed
-        CommentsUI commentsUI = new CommentsUI(review, currentUser);
+        CommentsUI commentsUI = new CommentsUI(review, user);
         commentsUI.setVisible(true);
     }
 }

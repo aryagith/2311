@@ -129,10 +129,6 @@ public class FriendsPanel extends JPanel {
         }
         return username;
     }
-    public void openDMUI (Movie movie) {
-        ReviewsUI reviewUI = new ReviewsUI(movie);
-        reviewUI.setVisible(true);
-    }
 }
 
 

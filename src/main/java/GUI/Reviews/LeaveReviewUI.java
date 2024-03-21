@@ -67,15 +67,15 @@ public class LeaveReviewUI extends JFrame {
                 Review review = new Review(0, user.getUserId(), movie.getMovieId(), commentText, rating, likes, dislikes);
                 createReview(user.getUserId(), review);
                 reviewArea.setText("");
-                openReviewsUI(movie);
+                openReviewsUI(movie, user);
                 }
         });
         reviewPanel.add(reviewArea);
         reviewPanel.add(publishButton);
         return reviewPanel;
     }
-    public void openReviewsUI (Movie movie){
-        ReviewsUI reviewUI = new ReviewsUI(movie);
+    public void openReviewsUI (Movie movie, User user){
+        ReviewsUI reviewUI = new ReviewsUI(movie, user);
         reviewUI.setVisible(true);
     }
     public void createReview(int userId, Review review) {

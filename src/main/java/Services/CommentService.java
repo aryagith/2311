@@ -11,9 +11,9 @@ public class CommentService {
         String commentText = rs.getString("comment_text");
         int upvotes = rs.getInt("upvotes");
         int downvotes = rs.getInt("downvotes");
-
+        int reviewId = rs.getInt("review_id");
         // Assuming the Comment model has a corresponding constructor
-        Comment comment = new Comment(commentId, userId, commentText, upvotes, downvotes);
+        Comment comment = new Comment(commentId, userId, commentText, upvotes, downvotes, reviewId);
         return comment;
     }
 
@@ -34,14 +34,15 @@ public class CommentService {
         return comments;
     }
 
-    public static boolean addComment(int userId, Comment comment) {
-        String sql = "INSERT INTO Comments (user_id, comment_text, upvotes, downvotes) VALUES (?, ?, ?, ?)";
+    public boolean addComment(int userId, Comment comment) {
+        String sql = "INSERT INTO Comments (user_id, comment_text, upvotes, downvotes, review_id) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = DbFunctions.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             pstmt.setString(2, comment.getCommentText());
             pstmt.setInt(3, comment.getUpvotes());
             pstmt.setInt(4, comment.getDownvotes());
+            pstmt.setInt(5, comment.getReviewId());
             return pstmt.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
