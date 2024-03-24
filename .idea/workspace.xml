@@ -5,14 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfd4444-07e2-410d-aff7-1860305bac7c" name="Changes" comment="Unit Testing">
-      <change afterPath="$PROJECT_DIR$/UML diagram ITR2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/IntegrationTests/IntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Dashboard/MovieRecommendationPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/MovieRecommendationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/movie.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Dashboard/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Dashboard/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/FriendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/FriendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/FriendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -24,6 +48,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -42,10 +73,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "ITR2",
+    "git-widget-placeholder": "Itr3-Krish",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/school/EECS 2032/Lab_7"
+    "last_opened_file_path": "C:/Users/krish/OneDrive/Documents/2311/src"
   }
 }]]></component>
   <component name="RecentsManager">
