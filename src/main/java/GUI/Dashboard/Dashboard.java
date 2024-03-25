@@ -36,6 +36,7 @@ public class Dashboard extends JFrame {
         headerPanel = new HeaderPanel(user);
         searchPanel = new SearchPanel();
         recentlyViewedPanel = new RecentlyViewedPanel(user);
+        CenterPanel centerPanel;
         centerPanel = new CenterPanel(recommendationService, user, this);
         friendsPanel = new FriendsPanel(user);
         mPanel = new MovieRecommendationPanel(user.getUsername());
@@ -68,7 +69,7 @@ public class Dashboard extends JFrame {
         centralPanel.add(mPanel, BorderLayout.SOUTH);
 
         // Add CenterPanel to the center
-        CenterPanel centerPanel = new CenterPanel(recommendationService, user, this);
+        centerPanel = new CenterPanel(recommendationService, user, this);
         centralPanel.add(centerPanel, BorderLayout.CENTER);
 
         mainPanel.add(centralPanel);

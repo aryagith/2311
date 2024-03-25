@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]" date="1711342781505" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2024-03-25 12:59 a.m. [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/MovieUI.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/MovieUI.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]/MovieUI.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/GUI/MovieUI$2.class" />
+    <option name="AFTER_PATH" value="target/classes/GUI/MovieUI$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]/MovieUI$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Services/CommentService.class" />
+    <option name="AFTER_PATH" value="target/classes/Services/CommentService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]/CommentService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Models/Comment.class" />
+    <option name="AFTER_PATH" value="target/classes/Models/Comment.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-03-25_12_59_a_m__[Changes]/Comment.class" />
+  </binary>
+</changelist>
