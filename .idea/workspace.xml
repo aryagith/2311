@@ -5,67 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cfd4444-07e2-410d-aff7-1860305bac7c" name="Changes" comment="Unit Testing">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Reviews/CommentsUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Reviews/LeaveCommentUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/database/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/movie.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Dashboard/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Dashboard/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/LeaveReviewUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Reviews/LeaveReviewUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MovieUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ReviewsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Reviews/ReviewsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/DbFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/BrowseMovieUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/CenterPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/CenterPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/FriendsPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieRecommendationPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieRecommendationPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieRecommendationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieRecommendationPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/MovieUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/RecentlyViewedPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/RecentlyViewedPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Dashboard/SearchPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Dashboard/SearchPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/FriendRequestsUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/LeaveReviewUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/LeaveReviewUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/LoginUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/LoginUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/MovieUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/ReviewsUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/DbFunctions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/FriendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/FriendService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/MovieRecommendationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/MovieRecommendationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/RecentlyViewdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/RecentlyViewdService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/RecommendationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/RecommendationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ReviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/JunitTests/Junittest_User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Itr3-Eric" />
+        <entry key="$PROJECT_DIR$" value="ITR3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "ITR3",
+    "git-widget-placeholder": "ITR3-Eric",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/school/EECS 2032/Lab_7"
@@ -158,19 +99,6 @@
       <option name="MAIN_CLASS_NAME" value="Tests.IntegrationTests.IntegrationTest" />
       <option name="METHOD_NAME" value="testFriendAndRecentlyViewedFlow" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="untitled" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="untitled" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
