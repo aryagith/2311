@@ -83,4 +83,3 @@ public class LeaveReviewUI extends JFrame {
         reviewService.addReview(userId, review);
     }
 }
-

@@ -102,7 +102,7 @@ public class MovieUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Logic to handle rating
-                openReviewsUI(user, movie);
+                openReviewsUI(movie, user);
             }
         });
         buttonPanel.add(rateButton);
@@ -111,32 +111,36 @@ public class MovieUI extends JFrame {
         recommendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Logic to handle recommendation
-                //JOptionPane.showMessageDialog(MovieUI.this, "Recommend to Friend button clicked");
+                // JOptionPane.showMessageDialog(MovieUI.this, "Recommend to Friend button
+                // clicked");
                 friendWindow = new JFrame("Friends: ");
-                friendWindow.setSize(200,500);
+                friendWindow.setSize(200, 500);
                 JLabel titleLabel = new JLabel("Friends: ");
                 titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
                 titleLabel.setFont(new Font("Arial", Font.BOLD, 16));
-                friendWindow.add(titleLabel,BorderLayout.NORTH);
+                friendWindow.add(titleLabel, BorderLayout.NORTH);
                 friendsList = new JTextArea();
                 friendsList.setEditable(false);
                 JScrollPane scrollPane = new JScrollPane(friendsList);
                 friendWindow.add(scrollPane, BorderLayout.CENTER);
-                updateFriends();
-
 
                 friendWindow.setVisible(true);
-            }
+                updateFriends(user);
 
+            }
         });
         buttonPanel.add(recommendButton);
     }
-    private void updateFriends() {
-        ArrayList<Integer> friendIds = (ArrayList<Integer>) FriendService.getFriends(user.getUserId());
-        friendWindow.getContentPane().removeAll(); // Clear previous content
-        friendWindow.setLayout(new GridLayout(friendIds.size(), 1)); // Set layout
 
+    public void updateFriends(User user) {
+        ArrayList<Integer> friendIds = (ArrayList<Integer>) FriendService.getFriends(user.getUserId());
+
+        // Clear previous content
+        friendWindow.getContentPane().removeAll();
+
+        JPanel friendPanel = new JPanel();
+        friendPanel.setLayout(new GridLayout(friendIds.size(), 1));
+        friendWindow.getContentPane().removeAll();
         for (int friendId : friendIds) {
             // Fetch friend's name based on their ID
             User friend = UserService.getUserById(friendId);
@@ -149,7 +153,7 @@ public class MovieUI extends JFrame {
                         String sql = "INSERT INTO Movie_recommendation (user_name, friend_name, movie_name) VALUES (?, ?, ?)";
 
                         try (Connection conn = DbFunctions.connect();
-                             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                                PreparedStatement pstmt = conn.prepareStatement(sql)) {
                             pstmt.setString(1, user.getUsername());
                             pstmt.setString(2, friendButton.getText());
                             pstmt.setString(3, movie.getTitle());
@@ -161,10 +165,12 @@ public class MovieUI extends JFrame {
                         }
                     }
                 });
-                friendWindow.add(friendButton);
+                friendPanel.add(friendButton);
             }
         }
 
+        JScrollPane scrollPane = new JScrollPane(friendPanel);
+        friendWindow.getContentPane().add(scrollPane, BorderLayout.CENTER);
         friendWindow.revalidate(); // Revalidate the window
         friendWindow.repaint(); // Repaint the window
     }
@@ -201,7 +207,7 @@ public class MovieUI extends JFrame {
         reviewUI.setVisible(true);
     }
 
-    public void openReviewsUI(User user, Movie movie) {
+    public void openReviewsUI(Movie movie, User user) {
         ReviewsUI reviewUI = new ReviewsUI(movie, user);
         reviewUI.setVisible(true);
     }
