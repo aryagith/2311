@@ -9,7 +9,6 @@ import Models.Movie;
 import Models.User;
 import Services.MovieService;
 import Services.RecommendationService;
-import Services.FriendService;
 
 public class Dashboard extends JFrame {
     private static Dashboard instance;

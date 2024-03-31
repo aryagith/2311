@@ -1,18 +1,13 @@
 package GUI.Dashboard;
+
 import GUI.FriendRequestsUI;
 import Models.User;
-import Services.DbFunctions;
 import Services.FriendService;
 import Services.UserService;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 public class FriendsPanel extends JPanel {
@@ -58,18 +53,19 @@ public class FriendsPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = usernameField.getText();
-                int friendId = getUserIdByUsername(username);
-                if (friendId != -1) {
-                    boolean added = friendsService.sendFriendRequest(user.getUserId(), friendId);
-                    if (added) {
+
+                try {
+                    int friendId = getUserIdByUsername(username);
+                    if (!user.isFriend(friendId)) {
                         JOptionPane.showMessageDialog(null, "Friend request sent successfully.");
                         updateFriendsList();
                     } else {
-                        JOptionPane.showMessageDialog(null, "Failed to send friend request.");
+                        JOptionPane.showMessageDialog(null, "Friend already exists.");
                     }
-                } else {
+                } catch (NullPointerException e2) {
                     JOptionPane.showMessageDialog(null, "User not found.");
                 }
+
             }
         });
 
@@ -137,5 +133,3 @@ public class FriendsPanel extends JPanel {
         frame.setVisible(true);
     }
 }
-
-

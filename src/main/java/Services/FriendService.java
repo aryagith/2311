@@ -13,7 +13,7 @@ public class FriendService {
     public static boolean addFriend(int userId, int friendId) {
         String sql = "INSERT INTO Friends (user_id, friend_id) VALUES (?, ?)";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             pstmt.setInt(2, friendId);
             return pstmt.executeUpdate() > 0;
@@ -28,7 +28,7 @@ public class FriendService {
     public boolean removeFriend(int userId, int friendId) {
         String sql = "DELETE FROM Friends WHERE user_id = ? AND friend_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             pstmt.setInt(2, friendId);
             return pstmt.executeUpdate() > 0;
@@ -43,7 +43,7 @@ public class FriendService {
         List<Integer> friends = new ArrayList<>();
         String sql = "SELECT friend_id FROM Friends WHERE user_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -55,10 +55,11 @@ public class FriendService {
         }
         return friends;
     }
+
     public boolean sendFriendRequest(int senderId, int receiverId) {
         String sql = "INSERT INTO FriendRequests (sender_id, receiver_id, status) VALUES (?, ?, ?)";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, senderId);
             pstmt.setInt(2, receiverId);
             pstmt.setString(3, "PENDING");
@@ -74,7 +75,7 @@ public class FriendService {
         List<Integer> requestIds = new ArrayList<>();
         String sql = "SELECT request_id FROM FriendRequests WHERE receiver_id = ? AND status = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             pstmt.setString(2, "PENDING");
             ResultSet rs = pstmt.executeQuery();
@@ -90,7 +91,7 @@ public class FriendService {
     public static boolean acceptFriendRequest(int requestId) {
         String sql = "UPDATE FriendRequests SET status = ? WHERE request_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, "ACCEPTED");
             pstmt.setInt(2, requestId);
             int rowsAffected = pstmt.executeUpdate();
@@ -104,11 +105,11 @@ public class FriendService {
     public static boolean declineFriendRequest(int requestID) {
         String sql = "DELETE FROM FriendRequests WHERE request_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, requestID);
             int rowsAffected = pstmt.executeUpdate();
             // Optionally, you can check if any rows were affected
-            return rowsAffected>0 ;
+            return rowsAffected > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -119,7 +120,7 @@ public class FriendService {
         String senderUsername = null;
         String sql = "SELECT sender_id FROM FriendRequests WHERE request_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, requestId);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
@@ -136,7 +137,7 @@ public class FriendService {
         String username = null;
         String sql = "SELECT username FROM Users WHERE user_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
@@ -147,11 +148,12 @@ public class FriendService {
         }
         return username;
     }
+
     public static int getSenderID(int requestId) {
-        int senderID= 0;
+        int senderID = 0;
         String sql = "SELECT sender_id FROM FriendRequests WHERE request_id = ?";
         try (Connection conn = DbFunctions.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, requestId);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {

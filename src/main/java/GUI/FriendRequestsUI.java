@@ -3,13 +3,11 @@ package GUI;
 import GUI.Dashboard.FriendsPanel;
 import Models.User;
 import Services.FriendService;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-
 import Services.UserService;
 
 public class FriendRequestsUI extends JPanel {
@@ -18,13 +16,11 @@ public class FriendRequestsUI extends JPanel {
     private UserService userService;
     private FriendService friendsService;
 
-
-
     public FriendRequestsUI(User user) {
         this.user = user;
-        friendsPanel= new FriendsPanel(user);
-        friendsService= new FriendService();
-        userService= new UserService();
+        friendsPanel = new FriendsPanel(user);
+        friendsService = new FriendService();
+        userService = new UserService();
 
         setLayout(new BorderLayout());
 
@@ -58,9 +54,9 @@ public class FriendRequestsUI extends JPanel {
                         boolean added = FriendService.acceptFriendRequest(request); // Add friend
                         if (added) {
                             // Successfully added friend, you can perform further actions if needed
-                            JOptionPane.showMessageDialog(null, "Friend added successfully.");
-                            FriendService.addFriend(user.getUserId(),senderID);
-                            FriendService.addFriend(senderID,user.getUserId());
+                            JOptionPane.showMessageDialog(null, "Friend Request Sent.");
+                            FriendService.addFriend(user.getUserId(), senderID);
+                            FriendService.addFriend(senderID, user.getUserId());
                             updateFriendRequestsList(friendRequestsPanel);
                             friendsPanel.updateFriendsList();
                         } else {
@@ -77,18 +73,16 @@ public class FriendRequestsUI extends JPanel {
             declineButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int senderID= FriendService.getSenderID(request);
-                    if(senderID != -1){
-                        boolean declined= FriendService.declineFriendRequest(request);
-                        if(declined){
-                        JOptionPane.showMessageDialog(null,"Friend request declined.");
+                    int senderID = FriendService.getSenderID(request);
+                    if (senderID != -1) {
+                        boolean declined = FriendService.declineFriendRequest(request);
+                        if (declined) {
+                            JOptionPane.showMessageDialog(null, "Friend request declined.");
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Could not decline friend request.");
                         }
-                        else{
-                            JOptionPane.showMessageDialog(null,"Could not decline friend request.");
-                        }
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null,"Could not find senders ID.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Could not find senders ID.");
                     }
                 }
             });
@@ -100,5 +94,3 @@ public class FriendRequestsUI extends JPanel {
         }
     }
 }
-
-

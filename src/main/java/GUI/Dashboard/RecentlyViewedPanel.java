@@ -1,10 +1,10 @@
 package GUI.Dashboard;
 
-import GUI.MovieUI;
 import Models.Movie;
 import Models.User;
 
 import javax.swing.*;
+
 import java.awt.*;
 
 public class RecentlyViewedPanel extends JPanel {
@@ -26,7 +26,7 @@ public class RecentlyViewedPanel extends JPanel {
         for (Movie movie : user.getRecentlyViewed()) {
             JButton movieButton = new JButton(movie.getTitle());
             movieButton.addActionListener(e -> {
-                MovieUtils.openMovieUI(movie, user);
+                Utilities.MovieUtils.openMovieUI(movie, user);
             });
             recentlyViewedMoviesPanel.add(movieButton);
         }

@@ -1,4 +1,4 @@
-package GUI.Dashboard;
+package Utilities;
 
 import GUI.MovieUI;
 import Models.Movie;
@@ -18,7 +18,8 @@ public class MovieUtils {
         SwingUtilities.invokeLater(() -> {
             try {
                 URL url = new URL(imageUrl);
-                ImageIcon icon = new ImageIcon(new ImageIcon(url).getImage().getScaledInstance(150, 225, Image.SCALE_SMOOTH));
+                ImageIcon icon = new ImageIcon(
+                        new ImageIcon(url).getImage().getScaledInstance(150, 225, Image.SCALE_SMOOTH));
                 imageLabel.setIcon(icon);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -33,8 +34,9 @@ public class MovieUtils {
         movieUI.updateMovieDetails(movie);
         movieUI.setVisible(true);
         user.addRecentlyViewed(movie);
-        // If Dashboard is a singleton or has a static way to access the current instance, you can update it here
-        Dashboard.getInstance().getRecentlyViewedPanel().populateRecentlyViewedMovies();
+        // If Dashboard is a singleton or has a static way to access the current
+        // instance, you can update it here
+        GUI.Dashboard.Dashboard.getInstance().getRecentlyViewedPanel().populateRecentlyViewedMovies();
     }
 
     public static JPanel createMovieCard(Movie movie, User user) {
@@ -46,8 +48,7 @@ public class MovieUtils {
         // Title with year and rating
         String titleText = String.format(
                 "<html><b><u>%s</u></b> (%d) <font color='red'><br>%s/10 &#9733;</font></html>",
-                movie.getTitle(), movie.getReleaseYear(), movie.getRating()
-        );
+                movie.getTitle(), movie.getReleaseYear(), movie.getRating());
         JLabel titleLabel = new JLabel(titleText, SwingConstants.CENTER);
         titleLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         titleLabel.addMouseListener(new MouseAdapter() {
