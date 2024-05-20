@@ -4,6 +4,8 @@ import Models.*;
 
 import javax.swing.*;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
+
 import GUI.LoginUI;
 
 import java.awt.*;

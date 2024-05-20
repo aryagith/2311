@@ -1,6 +1,9 @@
 package GUI.Dashboard;
 
 import javax.swing.*;
+
+import com.formdev.flatlaf.FlatDarculaLaf;
+
 import java.awt.*;
 import java.util.List;
 
@@ -21,6 +24,8 @@ public class Dashboard extends JFrame {
     private FriendsPanel friendsPanel;
     private MovieRecommendationPanel mPanel;
     private CenterPanel centerPanel;
+
+  
 
     public Dashboard(User user) {
         this.user = user;

@@ -4,10 +4,19 @@ import Services.UserService;
 
 import javax.swing.*;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 public class Main {
     public static void main(String[] args) {
         UserService us = new UserService();
         User user = us.getUserByUsername("demo");
+
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 new LoginUI();
